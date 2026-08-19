@@ -1,0 +1,1382 @@
+/* =========================================
+        CONFIGURACIÓN GENERAL
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Nunito', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+
+    background: #101522;
+
+    color: white;
+
+}
+
+
+/* =========================================
+                HEADER
+========================================= */
+
+header{
+
+    width: 100%;
+
+    height: 105px;
+
+    background: #F0F0F0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 50px;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,.3);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================
+             LOGO + TÍTULO
+========================================= */
+
+.logo{
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.logo img{
+
+    width: 78px;
+
+    height: 78px;
+
+    object-fit: contain;
+
+    margin-right: 15px;
+
+}
+
+
+.titulo h1{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #101522;
+
+    font-size: 32px;
+
+}
+
+
+.titulo p{
+
+    font-family: 'Nunito', sans-serif;
+
+    color: #0D9DBE;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-top: 2px;
+
+}
+
+
+/* =========================================
+                BUSCADOR
+========================================= */
+
+.buscador{
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.buscador input{
+
+    width: 280px;
+
+    height: 43px;
+
+    border: 2px solid #D5D5D5;
+
+    outline: none;
+
+    padding: 0 17px;
+
+    font-size: 15px;
+
+    border-radius: 25px 0 0 25px;
+
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+.buscador input:focus{
+
+    border-color: #0D9DBE;
+
+}
+
+
+.buscador button{
+
+    width: 55px;
+
+    height: 43px;
+
+    border: none;
+
+    background: #0D9DBE;
+
+    color: white;
+
+    font-size: 17px;
+
+    border-radius: 0 25px 25px 0;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.buscador button:hover{
+
+    background: #1E73BE;
+
+}
+
+
+/* =========================================
+               DESCRIPCIÓN
+========================================= */
+
+.descripcion{
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 75px 25px 55px;
+
+    text-align: center;
+
+}
+
+
+.descripcion h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.descripcion p{
+
+    max-width: 800px;
+
+    margin: 0 auto 15px;
+
+    color: #E8F7FF;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+/* =========================================
+              BIENVENIDA
+========================================= */
+
+.bienvenida{
+
+    text-align: center;
+
+    padding: 55px 20px 45px;
+
+    background: linear-gradient(
+        180deg,
+        #151F32,
+        #101522
+    );
+
+}
+
+
+.bienvenida h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.bienvenida p{
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #E5EDF5;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+.imagen-bienvenida{
+
+    display: block;
+
+    width: 280px;
+    height: 220px;
+
+    object-fit: contain;
+
+    margin: 25px auto 10px;
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+
+.imagen-bienvenida:hover{
+
+    transform: scale(1.05);
+
+}
+
+
+/* Flecha */
+
+.flecha{
+
+    margin-top: 30px;
+
+    color: #FFD54F;
+
+    font-size: 30px;
+
+    animation: bajarFlecha 1.5s infinite;
+
+}
+
+
+@keyframes bajarFlecha{
+
+    0%{
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+    50%{
+
+        transform: translateY(12px);
+
+        opacity: .6;
+
+    }
+
+    100%{
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* =========================================
+             DATOS CURIOSOS
+========================================= */
+
+.datos-curiosos{
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 30px 25px 80px;
+
+    text-align: center;
+
+}
+
+
+.datos-curiosos h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 34px;
+
+    color: #FFD54F;
+
+}
+
+
+.subtitulo-curiosidades{
+
+    color: #C9D8E8;
+
+    font-size: 17px;
+
+    margin-top: 8px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================
+            CONTENEDOR DATOS
+========================================= */
+
+.contenedor-datos{
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================================
+                DATO
+========================================= */
+
+.dato{
+
+    position: relative;
+
+    background: #182235;
+
+    border: 2px solid #263752;
+
+    border-radius: 20px;
+
+    padding: 30px 25px 25px;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    transition: .3s;
+
+}
+
+
+.dato:hover{
+
+    transform: translateY(-7px);
+
+    border-color: #00C8FF;
+
+    box-shadow:
+        0 12px 25px rgba(0,200,255,.18);
+
+}
+
+
+/* =========================================
+              ICONO DEL DATO
+========================================= */
+
+.icono-dato{
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.dato h3{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.dato p{
+
+    color: #E5EDF5;
+
+    line-height: 1.6;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================
+           PRESENTACIÓN SISTEMAS
+========================================= */
+
+.seccion-sistemas{
+
+    text-align: center;
+
+    padding: 45px 20px 25px;
+
+}
+
+
+.seccion-sistemas h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.seccion-sistemas p{
+
+    color: #C9D8E8;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+             LÍNEA DE TIEMPO
+========================================= */
+
+.linea-tiempo{
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 50px 20px 120px;
+
+}
+
+
+/* Línea central */
+
+.linea-tiempo::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 5px;
+
+    background: linear-gradient(
+        #00C8FF,
+        #1E73BE
+    );
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================
+                 SISTEMA
+========================================= */
+
+.sistema{
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* =========================================
+                 PUNTO
+========================================= */
+
+.punto{
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 76px;
+
+    height: 76px;
+
+    background: #101522;
+
+    border: 5px solid #00C8FF;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 35px;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 18px rgba(0,200,255,.45);
+
+    transition: .3s;
+
+}
+
+
+.punto:hover{
+
+    transform:
+        translateX(-50%)
+        scale(1.12);
+
+}
+
+
+/* =========================================
+                 TARJETAS
+========================================= */
+
+.tarjeta{
+
+    width: 43%;
+
+    margin-left: auto;
+
+    background: #182235;
+
+    border: 2px solid #263752;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+
+    transition: .35s;
+
+}
+
+
+.sistema:nth-child(even) .tarjeta{
+
+    margin-left: 0;
+
+    margin-right: auto;
+
+}
+
+
+.tarjeta:hover{
+
+    transform: scale(1.04);
+
+    border-color: #00C8FF;
+
+    box-shadow:
+        0 10px 30px rgba(0,200,255,.2);
+
+}
+
+
+/* =========================================
+              ENCABEZADO TARJETA
+========================================= */
+
+.encabezado{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px 23px;
+
+    background: linear-gradient(
+        90deg,
+        #0D9DBE,
+        #1E73BE
+    );
+
+    color: white;
+
+}
+
+
+.encabezado h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 22px;
+
+}
+
+
+.encabezado i{
+
+    font-size: 18px;
+
+    transition: .3s;
+
+}
+
+
+.tarjeta:hover .encabezado i{
+
+    transform: translate(3px,-3px);
+
+}
+
+
+/* =========================================
+              VISTA PREVIA
+========================================= */
+
+.vista-previa{
+
+    padding: 22px;
+
+}
+
+
+.vista-previa p{
+
+    color: #E5EDF5;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+}
+
+
+.vista-previa span{
+
+    color: #00C8FF;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================
+                  MODAL
+========================================= */
+
+.modal{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,.75);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+    z-index: 2000;
+
+}
+
+
+.modal.activo{
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =========================================
+             CONTENIDO MODAL
+========================================= */
+
+.modal-contenido{
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 900px;
+
+    max-height: 90vh;
+
+    background: #182235;
+
+    border: 2px solid #00C8FF;
+
+    border-radius: 22px;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,.6);
+
+    transform: scale(.8);
+
+    transition: transform .3s ease;
+
+}
+
+
+.modal.activo .modal-contenido{
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================
+              TÍTULO MODAL
+========================================= */
+
+.modal-titulo{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 23px 30px;
+
+    background: linear-gradient(
+        90deg,
+        #0D9DBE,
+        #1E73BE
+    );
+
+    color: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 2;
+
+}
+
+
+.modal-icono{
+
+    font-size: 38px;
+
+}
+
+
+.modal-titulo h2{
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================================
+                CERRAR
+========================================= */
+
+.cerrar{
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 16px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.18);
+
+    color: white;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: .3s;
+
+}
+
+
+.cerrar:hover{
+
+    background: rgba(255,255,255,.35);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================
+              CUERPO MODAL
+========================================= */
+
+.modal-cuerpo{
+
+    padding: 30px;
+
+}
+
+
+.modal-cuerpo h3{
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.modal-cuerpo p{
+
+    color: #E5EDF5;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================
+                  IMAGEN
+========================================= */
+
+.imagen-sistema{
+
+    width: 100%;
+
+    min-height: 230px;
+
+    background: #101522;
+
+    border: 2px dashed #31506D;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 20px 0 30px;
+
+    color: #00C8FF;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.imagen-sistema img{
+
+    max-width: 100%;
+
+    max-height: 400px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================================
+                   VIDEO
+========================================= */
+
+.video-sistema{
+
+    width: 100%;
+
+    min-height: 280px;
+
+    background: #101522;
+
+    border: 2px dashed #31506D;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 20px 0 30px;
+
+    color: #00C8FF;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    overflow: hidden;
+
+}
+
+
+.video-sistema video{
+
+    width: 100%;
+
+    max-height: 500px;
+
+    border-radius: 15px;
+
+}
+
+
+/* =========================================
+                   JUEGO
+========================================= */
+
+.juego-sistema{
+
+    width: 100%;
+
+    min-height: 180px;
+
+    background: #101522;
+
+    border: 2px dashed #31506D;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 20px 0 30px;
+
+    color: #FFD54F;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+                  BOTÓN
+========================================= */
+
+.boton{
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #0D9DBE;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-family: 'Fredoka', sans-serif;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.boton:hover{
+
+    background: #1E73BE;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+                 RESPONSIVE
+========================================= */
+
+@media(max-width: 800px){
+
+    header{
+
+        height: auto;
+
+        min-height: 100px;
+
+        padding: 12px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .logo img{
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+
+    .titulo h1{
+
+        font-size: 25px;
+
+    }
+
+
+    .buscador{
+
+        width: 100%;
+
+    }
+
+
+    .buscador input{
+
+        width: 100%;
+
+    }
+
+
+    .contenedor-datos{
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .linea-tiempo::before{
+
+        left: 35px;
+
+    }
+
+
+    .sistema{
+
+        justify-content: flex-start;
+
+        padding-left: 80px;
+
+    }
+
+
+    .punto{
+
+        left: 35px;
+
+    }
+
+
+    .tarjeta{
+
+        width: 100%;
+
+        margin: 0 !important;
+
+    }
+
+
+    .modal{
+
+        padding: 12px;
+
+    }
+
+
+    .modal-contenido{
+
+        width: 100%;
+
+        max-height: 94vh;
+
+        border-radius: 17px;
+
+    }
+
+
+    .modal-titulo{
+
+        padding: 20px;
+
+    }
+
+
+    .modal-titulo h2{
+
+        font-size: 22px;
+
+        padding-right: 35px;
+
+    }
+
+
+    .modal-cuerpo{
+
+        padding: 20px;
+
+    }
+
+}
+
+/* =========================================
+        IMÁGENES DE LOS SISTEMAS
+========================================= */
+
+.imagen-sistema {
+
+    width: 100%;
+
+    height: 180px;
+
+    margin: 20px 0;
+
+    padding: 10px;
+
+    background: #1E2A3D;
+
+    border: 3px solid #00C8FF;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.imagen-sistema img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    transition: transform .3s ease;
+
+}
+
+
+.imagen-sistema:hover img {
+
+    transform: scale(1.05);
+
+}
+
+/* =========================================
+        BOTÓN "CONOCER MÁS"
+========================================= */
+
+.boton-sistema {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background: #00C8FF;
+    color: white !important;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    border-radius: 25px;
+    border: 3px solid #0099CC;
+
+    box-shadow: 0 4px 0 #007A99;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Al pasar el mouse */
+
+.boton-sistema:hover {
+    background: #FFD54F;
+    color: #172033 !important;
+
+    border-color: #E0A900;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 0 #B88600;
+}
+
+
+/* Flecha */
+
+.boton-sistema i {
+    transition: transform 0.2s ease;
+}
+
+
+/* Movimiento de la flecha */
+
+.boton-sistema:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Al hacer clic */
+
+.boton-sistema:active {
+    transform: translateY(1px);
+
+    box-shadow: 0 2px 0 #B88600;
+}

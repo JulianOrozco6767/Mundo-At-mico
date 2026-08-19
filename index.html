@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mundo Atómico</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fuentes infantiles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!--                    HEADER                         -->
+<!-- ================================================= -->
+
+<header>
+
+    <!-- Logo + título -->
+
+    <div class="logo">
+
+        <img
+            src="Imagenes/Mundo Atomico Logo.jpeg"
+            alt="Logo de Mundo Atómico"
+        >
+
+        <div class="titulo">
+
+            <h1>Mundo Atómico</h1>
+
+            <p>Aprende y Descubre</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Buscador -->
+
+    <div class="buscador">
+
+        <input
+            type="text"
+            id="buscar"
+            placeholder="Buscar un sistema..."
+            onkeypress="if(event.key === 'Enter') buscarSistema()"
+        >
+
+        <button onclick="buscarSistema()">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================================= -->
+<!--          BIENVENIDA               -->
+<!-- ================================= -->
+
+<section class="bienvenida">
+
+    <h2>🌎 ¡Bienvenido a Mundo Atómico!</h2>
+
+    <p>
+
+        Prepárate para conocer cómo funciona tu cuerpo.
+        Desplázate hacia abajo y descubre cada uno de sus sistemas.
+
+    </p>
+
+
+    <!-- Imagen de bienvenida -->
+
+    <img
+        src="Imagenes/Mundo_Atomico_Logo.png"
+        alt="Ilustración del cuerpo humano"
+        class="imagen-bienvenida"
+    >
+
+
+    <!-- Flecha -->
+
+    <div class="flecha">
+
+        <i class="fa-solid fa-arrow-down"></i>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!--                  DESCRIPCIÓN                      -->
+<!-- ================================================= -->
+
+<section class="descripcion">
+
+    <h2>🌎 Conoce tu cuerpo</h2>
+
+    <p>
+
+        El cuerpo humano es una obra maestra de la naturaleza y una
+        máquina biológica perfecta que trabaja sin descanso las
+        veinticuatro horas del día.
+
+        Está compuesto por billones de células diminutas que se agrupan
+        para formar tejidos, órganos y sistemas interconectados que
+        colaboran en perfecta armonía para mantenernos con vida,
+        permitirnos crecer, sentir y movernos.
+
+        Por dentro, es un universo dinámico donde el corazón late como
+        una bomba infatigable, el cerebro procesa información y los
+        pulmones respiran el aire que nos da energía.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!--                DATOS CURIOSOS                    -->
+<!-- ================================================= -->
+
+<section class="datos-curiosos">
+
+    <h2>💡 ¡Datos curiosos!</h2>
+
+    <p class="subtitulo-curiosidades">
+
+        Descubre algunas cosas increíbles sobre tu cuerpo
+
+    </p>
+
+
+    <div class="contenedor-datos">
+
+
+        <!-- DATO 1 -->
+
+        <div class="dato">
+
+            <div class="icono-dato">
+                ⚡
+            </div>
+
+            <h3>¿Sabías que...?</h3>
+
+            <p>
+
+                Los nervios de tu cuerpo pueden enviar señales
+                a gran velocidad desde el cerebro hasta diferentes
+                partes del cuerpo.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- DATO 2 -->
+
+        <div class="dato">
+
+            <div class="icono-dato">
+                👃
+            </div>
+
+            <h3>¡Qué increíble!</h3>
+
+            <p>
+
+                Tu nariz puede reconocer una enorme cantidad
+                de olores diferentes y ayudarte a identificar
+                lo que ocurre a tu alrededor.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- DATO 3 -->
+
+        <div class="dato">
+
+            <div class="icono-dato">
+                👁️
+            </div>
+
+            <h3>¡Mira esto!</h3>
+
+            <p>
+
+                Tus ojos trabajan constantemente para enviar
+                información al cerebro sobre todo lo que estás viendo.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- DATO 4 -->
+
+        <div class="dato">
+
+            <div class="icono-dato">
+                ❤️
+            </div>
+
+            <h3>¡Tu corazón!</h3>
+
+            <p>
+
+                El corazón trabaja continuamente para llevar
+                sangre a todas las partes de tu cuerpo.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!--                  LÍNEA DE TIEMPO                 -->
+<!-- ================================================= -->
+
+<section class="seccion-sistemas">
+
+    <h2>🧬 Descubre los sistemas de tu cuerpo</h2>
+
+    <p>
+
+        Haz clic en cada sistema para conocer más sobre él.
+
+    </p>
+
+</section>
+
+
+
+<main class="linea-tiempo">
+
+
+    <!-- ================================================= -->
+    <!--                 SISTEMA NERVIOSO                  -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            🧠
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Nervioso</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Controla y coordina nuestro cuerpo.
+                    Nos permite pensar, sentir, aprender y responder
+                    a lo que sucede a nuestro alrededor.
+
+                </p>
+
+
+                <a
+                    href="nervioso.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                   SISTEMA ÓSEO                   -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            🦴
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Óseo</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Está formado por los huesos que sostienen y protegen
+                     nuestro cuerpo, además de ayudarnos a mantener nuestra estructura.
+
+                </p>
+
+
+                <a
+                    href="oseo.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                 SISTEMA MUSCULAR                 -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            💪
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Muscular</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Está formado por los músculos y nos permite movernos, 
+                    mantener nuestra postura y realizar diferentes actividades.
+
+                </p>
+
+
+                <a
+                    href="muscular.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                 SISTEMA CIRCULATORIO             -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            🫀
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Circulatorio</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Transporta la sangre por todo el cuerpo, 
+                    llevando oxígeno y nutrientes a los órganos que los necesitan.
+
+                </p>
+
+
+                <a
+                    href="circulatorio.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                 SISTEMA RESPIRATORIO              -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            🫁
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Respiratorio</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Nos permite respirar y obtener el oxígeno
+                    que nuestro cuerpo necesita para funcionar
+                    correctamente.
+
+                </p>
+
+
+                <a
+                    href="respiratorio.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                  SISTEMA DIGESTIVO                -->
+    <!-- ================================================= -->
+
+    <section class="sistema">
+
+        <div class="punto">
+
+            🍎
+
+        </div>
+
+
+        <div class="tarjeta" onclick="expandirSistema(this)">
+
+            <div class="encabezado">
+
+                <h2>Sistema Digestivo</h2>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+
+            <!-- ÚNICAMENTE DESCRIPCIÓN + BOTÓN -->
+
+            <div class="contenido">
+
+                <p>
+
+                    Transforma los alimentos que comemos para obtener
+                    los nutrientes y la energía que nuestro cuerpo necesita.
+
+                </p>
+
+
+                <a
+                    href="digestivo.html"
+                    class="boton-sistema"
+                    onclick="event.stopPropagation()"
+                >
+
+                    Conocer más
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================================================= -->
+<!--                  JAVASCRIPT                      -->
+<!-- ================================================= -->
+
+<script src="Expandir.js"></script>
+
+<script src="Buscador.js"></script>
+
+
+</body>
+
+</html>
