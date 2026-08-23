@@ -1,155 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sistema Circulatorio | Mundo Atómico</title>
-
     <link rel="stylesheet" href="circulatorio.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
+    <section id="welcome-screen" aria-labelledby="welcome-title">
+        <p class="eyebrow">Mundo Atómico</p>
+        <h1 id="welcome-title">Sistema Circulatorio</h1>
+        <p>Conoce el viaje de la sangre, las partes que forman este sistema y cómo puedes cuidarlo.</p>
+        <button class="btn-launch" type="button" onclick="openCirculatorySystem()">Explorar el sistema</button>
+        <a class="home-link" href="index.html">← Volver al inicio</a>
+    </section>
 
+    <main id="main-interface" aria-hidden="true">
+        <header class="site-header">
+            <a class="brand" href="index.html">
+                <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
+                <span>
+                    <strong>Mundo Atómico</strong>
+                    <small>Aprende y descubre</small>
+                </span>
+            </a>
 
-<!-- =========================================
-                HEADER
-========================================= -->
+            <a class="btn-home" href="index.html">Inicio</a>
+        </header>
 
-<header>
+        <div class="content-body">
+            <section class="title-block full-width">
+                <p class="eyebrow">Sistema del cuerpo humano</p>
+                <h1>🫀 Sistema Circulatorio</h1>
+                <p>Una red de transporte que lleva oxígeno y nutrientes a cada parte de tu cuerpo.</p>
+            </section>
 
-    <!-- Logo -->
+            <section class="card">
+                <h2>¿Qué es?</h2>
+                <p>
+                    Es el sistema formado por el corazón, la sangre y los vasos sanguíneos.
+                    Trabajan en equipo para transportar sustancias importantes por todo el cuerpo.
+                </p>
+            </section>
 
-    <div class="logo">
+            <section class="card">
+                <h2>¿Cómo funciona?</h2>
+                <p>
+                    El corazón bombea la sangre hacia los pulmones para recibir oxígeno y después
+                    la impulsa al resto del cuerpo. Las venas la ayudan a regresar al corazón.
+                </p>
+            </section>
 
-        <img
-            src="Imagenes/Mundo Atomico Logo.jpeg"
-            alt="Logo de Mundo Atómico"
-        >
+            <section class="card full-width">
+                <h2>Partes y funciones principales</h2>
 
-        <div class="titulo">
+                <div class="parts-grid">
+                    <article class="part-item">
+                        <h3>Corazón</h3>
+                        <p>Es el músculo que bombea la sangre sin detenerse.</p>
+                    </article>
 
-            <h1>Mundo Atómico</h1>
+                    <article class="part-item">
+                        <h3>Arterias</h3>
+                        <p>Llevan la sangre desde el corazón hacia los órganos y tejidos.</p>
+                    </article>
 
-            <p>Aprende y Descubre</p>
+                    <article class="part-item">
+                        <h3>Venas</h3>
+                        <p>Devuelven la sangre al corazón después de recorrer el cuerpo.</p>
+                    </article>
 
+                    <article class="part-item">
+                        <h3>Sangre</h3>
+                        <p>Transporta oxígeno, nutrientes y ayuda a proteger el organismo.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card media-card">
+                <h2>Imagen del sistema</h2>
+
+                <img
+                    class="system-image"
+                    src="Imagenes/Sistema-circulatorio.jpg"
+                    alt="Ilustración del sistema circulatorio"
+                >
+            </section>
+
+            <section class="card media-card">
+                <h2>Video educativo</h2>
+
+                <video controls preload="metadata">
+                    <source
+                        src="Imagenes/EL SISTEMA CIRCULATORIO _ Vídeos Educativos para Niños de Primaria _ Happy Learning.mp4"
+                        type="video/mp4"
+                    >
+                    Tu navegador no puede reproducir este video.
+                </video>
+            </section>
+
+            <section class="card full-width game-card">
+                <h2>Zona de juego</h2>
+
+                <div class="game-placeholder">
+                    <span>🎮</span>
+
+                    <div>
+                        <h3>Próximamente: pon a prueba lo aprendido</h3>
+                        <p>
+                            Este espacio está preparado para agregar un juego, por ejemplo,
+                            uno de preguntas o de relacionar las partes del sistema circulatorio.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card full-width">
+                <h2>Cómo cuidarlo</h2>
+
+                <ul class="care-list">
+                    <li>Haz actividad física con frecuencia.</li>
+                    <li>Prefiere alimentos variados, frutas y verduras.</li>
+                    <li>Bebe suficiente agua durante el día.</li>
+                    <li>Evita el consumo de tabaco.</li>
+                </ul>
+            </section>
         </div>
 
-    </div>
+        <footer>
+            <button class="btn-back" type="button" onclick="closeCirculatorySystem()">
+                Cerrar sección
+            </button>
+        </footer>
+    </main>
 
+    <script>
+        function openCirculatorySystem() {
+            document.getElementById("welcome-screen").classList.add("hidden");
 
-    <!-- Botón Inicio -->
+            const main = document.getElementById("main-interface");
+            main.classList.add("active");
+            main.setAttribute("aria-hidden", "false");
 
-    <a href="index.html" class="boton-inicio">
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
 
-        <i class="fa-solid fa-house"></i>
+        function closeCirculatorySystem() {
+            const main = document.getElementById("main-interface");
 
-        Inicio
+            main.classList.remove("active");
+            main.setAttribute("aria-hidden", "true");
 
-    </a>
+            document.getElementById("welcome-screen").classList.remove("hidden");
 
-
-</header>
-
-
-
-<!-- =========================================
-             CONTENIDO PRINCIPAL
-========================================= -->
-
-<main class="contenido-sistema">
-
-
-    <!-- Título -->
-
-    <h2>🫀 Sistema Circulatorio</h2>
-
-
-    <!-- Descripción -->
-
-    <section class="descripcion-sistema">
-
-        <h3>¿Qué es?</h3>
-
-        <p>
-
-            El sistema nervioso controla y coordina nuestro cuerpo.
-            Nos permite pensar, sentir, aprender y responder a lo que
-            sucede a nuestro alrededor.
-
-        </p>
-
-        <p>
-
-            Está formado por diferentes partes que trabajan juntas
-            para recibir información, procesarla y enviar respuestas
-            a nuestro cuerpo.
-
-        </p>
-
-    </section>
-
-
-    <!-- Espacio para imagen -->
-
-    <section class="imagen-sistema">
-
-        <img
-            src="Imagenes/Sistema-circulatorio.jpg"
-            alt="Sistema Nervioso"
-        >
-
-    </section>
-
-    <section class="recurso-sistema">
-
-    <h3>🎬 Explora el sistema</h3>
-
-    <div class="video-contenedor">
-
-        <video controls>
-            <source src="Imagenes/EL SISTEMA CIRCULATORIO _ Vídeos Educativos para Niños de Primaria _ Happy Learning.mp4" type="video/mp4">
-
-            Tu navegador no puede reproducir este video.
-        </video>
-
-    </div>
-
-    <section class="modelo-3d">
-
-    <h3>🫀 Explora el aparato cardiovascular</h3>
-
-    <iframe
-        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/aparato-cardiovascular"
-        title="Modelo 3D del aparato cardiovascular"
-        allowfullscreen>
-    </iframe>
-
-</section>
-
-
-</main>
-
-
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
-
 </html>

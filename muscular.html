@@ -1,158 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema Muscular | Mundo Atómico</title>
-
-    <link rel="stylesheet" href="muscular.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Muscular | Mundo Atómico</title>
+  <link rel="stylesheet" href="muscular.css">
 </head>
-
-
 <body>
 
+<section id="welcome-screen">
+  <p class="eyebrow">Mundo Atómico</p>
+  <h1>💪 Sistema Muscular</h1>
+  <p>Descubre los músculos que te ayudan a moverte, correr, saltar y sonreír.</p>
+  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
+  <a class="home-link" href="index.html">← Volver al inicio</a>
+</section>
 
-<!-- =========================================
-                HEADER
-========================================= -->
-
-<header>
-
-    <!-- Logo -->
-
-    <div class="logo">
-
-        <img
-            src="Imagenes/Mundo Atomico Logo.jpeg"
-            alt="Logo de Mundo Atómico"
-        >
-
-        <div class="titulo">
-
-            <h1>Mundo Atómico</h1>
-
-            <p>Aprende y Descubre</p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Botón Inicio -->
-
-    <a href="index.html" class="boton-inicio">
-
-        <i class="fa-solid fa-house"></i>
-
-        Inicio
-
+<main id="main-interface">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
+      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
     </a>
+    <a class="btn-home" href="index.html">Inicio</a>
+  </header>
 
-
-</header>
-
-
-
-<!-- =========================================
-             CONTENIDO PRINCIPAL
-========================================= -->
-
-<main class="contenido-sistema">
-
-
-    <!-- Título -->
-
-    <h2>💪 Sistema Muscular</h2>
-
-
-    <!-- Descripción -->
-
-    <section class="descripcion-sistema">
-
-        <h3>¿Qué es?</h3>
-
-        <p>
-
-            El sistema nervioso controla y coordina nuestro cuerpo.
-            Nos permite pensar, sentir, aprender y responder a lo que
-            sucede a nuestro alrededor.
-
-        </p>
-
-        <p>
-
-            Está formado por diferentes partes que trabajan juntas
-            para recibir información, procesarla y enviar respuestas
-            a nuestro cuerpo.
-
-        </p>
-
+  <div class="content-body">
+    <section class="title-block full-width">
+      <p class="eyebrow">Sistema del cuerpo humano</p>
+      <h1>💪 Sistema Muscular</h1>
+      <p>Los músculos hacen posible cada uno de tus movimientos.</p>
     </section>
 
-
-    <!-- Espacio para imagen -->
-
-    <section class="imagen-sistema">
-
-        <img
-            src="Imagenes/sistema-nervioso.png"
-            alt="Sistema Nervioso"
-        >
-
+    <section class="card">
+      <h2>¿Qué es?</h2>
+      <p>Es el conjunto de músculos del cuerpo. Ellos se contraen y se relajan para producir movimiento.</p>
     </section>
 
-
-
-    <!-- =========================================
-              MÁS CONTENIDO DESPUÉS
-    ========================================= -->
-
-    <section class="informacion-extra">
-
-        <h3>🔎 Conozcamos más</h3>
-
-        <p>
-
-            Aquí puedes agregar más información sobre el sistema,
-            sus órganos, sus funciones y datos interesantes.
-
-        </p>
-
+    <section class="card">
+      <h2>¿Cómo funciona?</h2>
+      <p>Los músculos reciben órdenes del sistema nervioso y tiran de los huesos para mover las articulaciones.</p>
     </section>
 
-    <section class="modelo-3d">
+    <section class="card full-width">
+      <h2>Partes y funciones principales</h2>
 
-    <h3>🫀 Explora el aparato cardiovascular</h3>
+      <div class="parts-grid">
+        <article class="part-item"><h3>Bíceps</h3><p>Ayuda a doblar el brazo.</p></article>
+        <article class="part-item"><h3>Abdominales</h3><p>Dan estabilidad al tronco.</p></article>
+        <article class="part-item"><h3>Cuádriceps</h3><p>Permiten extender la pierna.</p></article>
+        <article class="part-item"><h3>Corazón</h3><p>Es un músculo que bombea sangre.</p></article>
+      </div>
+    </section>
 
-    <iframe
-        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/aparato-cardiovascular"
-        title="Modelo 3D del aparato cardiovascular"
-        allowfullscreen>
-    </iframe>
+    <section class="card full-width">
+      <h2>Video educativo</h2>
+      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema muscular.</div>
+    </section>
 
+    <section class="card full-width game-card">
+      <h2>Zona de juego</h2>
+      <div class="game-placeholder">
+        <span>🎮</span>
+        <div>
+          <h3>Próximamente: mueve el cuerpo</h3>
+          <p>Aquí puedes agregar un juego para identificar músculos y sus movimientos.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="card full-width">
+      <h2>Cómo cuidarlo</h2>
+      <ul class="care-list">
+        <li>Calienta antes de hacer ejercicio.</li>
+        <li>Estira con cuidado después de moverte.</li>
+        <li>Come alimentos nutritivos.</li>
+        <li>Descansa cuando tu cuerpo lo necesite.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
 </main>
 
+<script>
+  function openSystem() {
+    document.getElementById("welcome-screen").classList.add("hidden");
+    document.getElementById("main-interface").classList.add("active");
+  }
+
+  function closeSystem() {
+    document.getElementById("main-interface").classList.remove("active");
+    document.getElementById("welcome-screen").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
 
 </body>
-
 </html>

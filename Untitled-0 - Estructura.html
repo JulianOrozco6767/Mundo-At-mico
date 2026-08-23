@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Circulatorio | Atlas Anatómico</title>
+    <style>
+        :root {
+            --bg-primary: #080c14;
+            --bg-card: rgba(15, 23, 42, 0.85);
+            --accent-red: #ff334b;
+            --accent-blue: #29b6f6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- PANTALLA DE INICIO (BOTÓN PRINCIPAL) --- */
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, #111827 0%, #080c14 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.5s ease;
+        }
+
+        #welcome-screen h1 {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #welcome-screen p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 500px;
+            text-align: center;
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+
+        .btn-launch {
+            background: linear-gradient(135deg, var(--accent-red), #b91c1c);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(255, 51, 75, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-launch:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 35px rgba(255, 51, 75, 0.7);
+        }
+
+        /* --- INTERFAZ PRINCIPAL DEL SISTEMA CIRCULATORIO --- */
+        #main-interface {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-interface.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Encabezado */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(8, 12, 20, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 51, 75, 0.6);
+        }
+
+        .logo-icon::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            width: 240px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box:focus {
+            border-color: var(--accent-red);
+        }
+
+        /* Contenido principal de la interfaz */
+        .content-body {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .content-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #ff6b81;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0 0 15px 0;
+        }
+
+        /* Listas de partes y funciones */
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .part-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .part-item h4 {
+            margin: 0 0 6px 0;
+            color: var(--accent-blue);
+            font-size: 1rem;
+        }
+
+        .part-item p {
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        /* Sección de cuidados */
+        .care-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .care-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .care-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        /* Botón de retorno */
+        .footer-nav {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 10px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-back:hover {
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pantalla Inicial con Botón de Acceso -->
+    <div id="welcome-screen">
+        <h1>Sistema Circulatorio</h1>
+        <p>Explora la estructura anatómica, las funciones vitales del flujo sanguíneo y los métodos de cuidado corporal.</p>
+        <button class="btn-launch" onclick="openCirculatorySystem()">Desplegar Sistema Circulatorio</button>
+    </div>
+
+    <!-- Interfaz Principal del Sistema Circulatorio -->
+    <div id="main-interface">
+        
+        <!-- Encabezado con Logo y Buscador -->
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <span class="logo-text">Atlas Anatómico</span>
+            </div>
+            <input type="text" class="search-box" placeholder="Buscar componente o sistema...">
+        </header>
+
+        <!-- Contenido Temático Estructurado -->
+        <div class="content-body">
+            
+            <!-- Qué es -->
+            <div class="card">
+                <h2>¿Qué es el Sistema Circulatorio?</h2>
+                <p>Es una red compleja de transporte compuesta por el corazón, los vasos sanguíneos y la sangre. Su propósito fundamental es garantizar que cada célula del cuerpo humano reciba el oxígeno y los nutrientes indispensables para su supervivencia y correcto funcionamiento.</p>
+            </div>
+
+            <!-- Cómo funciona -->
+            <div class="card">
+                <h2>¿Cómo Funciona?</h2>
+                <p>El corazón actúa como una bomba central. Impulsa la sangre desoxigenada hacia los pulmones para limpiarla y enriquecerla con oxígeno. Posteriormente, esa sangre limpia es bombeada a través de las arterias principales para distribuirla por todo el organismo, retornando de vuelta mediante las venas.</p>
+            </div>
+
+            <!-- Partes y Funciones (Ancho completo) -->
+            <div class="card full-width">
+                <h2>Partes y Funciones Principales</h2>
+                <div class="parts-grid">
+                    <div class="part-item">
+                        <h4>Corazón</h4>
+                        <p>Órgano muscular central que bombea sangre de forma continua a todo el cuerpo.</p>
+                    </div>
+                    <div class="part-item">
+                        <h4>Arteria Aorta</h4>
+                        <p>La arteria principal que distribuye sangre rica en oxígeno desde el corazón al resto del cuerpo.</p>
+                    </div>
+                    <div class="part-item">
+                        <h4>Arterias</h4>
+                        <p>Vasos de paredes elásticas que transportan sangre limpia (oxigenada) hacia los tejidos.</p>
+                    </div>
+                    <div class="part-item">
+                        <h4>Venas</h4>
+                        <p>Conductos que recolectan la sangre usada y la devuelven de regreso hacia el corazón.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cómo cuidarlo -->
+            <div class="card full-width">
+                <h2>Cómo Cuidar el Sistema Circulatorio</h2>
+                <ul class="care-list">
+                    <li>Mantener una alimentación equilibrada, reduciendo el consumo excesivo de grasas saturadas, azúcares refinados y sal.</li>
+                    <li>Practicar actividad física o ejercicio cardiovascular de forma regular para mantener la elasticidad y limpieza de las arterias.</li>
+                    <li>Consumir suficiente agua diariamente para facilitar el flujo adecuado de la sangre por todo el organismo.</li>
+                    <li>Evitar el consumo de tabaco y la exposición prolongada a ambientes contaminados que afecten la salud vascular.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-nav">
+            <button class="btn-back" onclick="closeCirculatorySystem()">Cerrar sección</button>
+        </div>
+
+    </div>
+
+    <script>
+        function openCirculatorySystem() {
+            const welcome = document.getElementById('welcome-screen');
+            const mainInterface = document.getElementById('main-interface');
+
+            welcome.style.opacity = '0';
+            setTimeout(() => {
+                welcome.style.display = 'none';
+                mainInterface.classList.add('active');
+                window.scrollTo(0, 0);
+            }, 500);
+        }
+
+        function closeCirculatorySystem() {
+            const welcome = document.getElementById('welcome-screen');
+            const mainInterface = document.getElementById('main-interface');
+
+            mainInterface.classList.remove('active');
+            welcome.style.display = 'flex';
+            setTimeout(() => {
+                welcome.style.opacity = '1';
+            }, 50);
+        }
+    </script>
+</body>
+</html>

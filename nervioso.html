@@ -1,151 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema Nervioso | Mundo Atómico</title>
-
-    <link rel="stylesheet" href="nervioso.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Nervioso | Mundo Atómico</title>
+  <link rel="stylesheet" href="nervioso.css">
 </head>
-
-
 <body>
 
+<section id="welcome-screen">
+  <p class="eyebrow">Mundo Atómico</p>
+  <h1>🧠 Sistema Nervioso</h1>
+  <p>Descubre cómo el cerebro, los nervios y la médula espinal coordinan tu cuerpo.</p>
+  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
+  <a class="home-link" href="index.html">← Volver al inicio</a>
+</section>
 
-<!-- =========================================
-                HEADER
-========================================= -->
-
-<header>
-
-    <!-- Logo -->
-
-    <div class="logo">
-
-        <img
-            src="Imagenes/Mundo Atomico Logo.jpeg"
-            alt="Logo de Mundo Atómico"
-        >
-
-        <div class="titulo">
-
-            <h1>Mundo Atómico</h1>
-
-            <p>Aprende y Descubre</p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Botón Inicio -->
-
-    <a href="index.html" class="boton-inicio">
-
-        <i class="fa-solid fa-house"></i>
-
-        Inicio
-
+<main id="main-interface" aria-hidden="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
+      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
     </a>
+    <a class="btn-home" href="index.html">Inicio</a>
+  </header>
 
-
-</header>
-
-
-
-<!-- =========================================
-             CONTENIDO PRINCIPAL
-========================================= -->
-
-<main class="contenido-sistema">
-
-
-    <!-- Título -->
-
-    <h2>🧠 Sistema Nervioso</h2>
-
-
-    <!-- Descripción -->
-
-    <section class="descripcion-sistema">
-
-        <h3>¿Qué es?</h3>
-
-        <p>
-
-            El sistema nervioso es el encargado de recibir información del entorno 
-            y coordinar las respuestas de nuestro cuerpo. Gracias a él podemos pensar, 
-            aprender, recordar, sentir y realizar movimientos.
-
-        </p>
-
-        <h3>¿Qué hace?</h3>
-
-        <p>
-
-            Nos permite reaccionar ante lo que sucede a nuestro alrededor. Por ejemplo, cuando tocamos algo caliente, el sistema nervioso ayuda al cuerpo a responder rápidamente.
-
-        </p>
-
-        <h3>¿Cómo cuidarlo?</h3>
-
-        <p>
-
-            Dormir bien, alimentarse adecuadamente, hacer actividad física y 
-            proteger la cabeza de golpes son algunas 
-            formas de cuidar nuestro sistema nervioso.
-        </p>
-
+  <div class="content-body">
+    <section class="title-block full-width">
+      <p class="eyebrow">Sistema del cuerpo humano</p>
+      <h1>🧠 Sistema Nervioso</h1>
+      <p>El centro de control que te permite pensar, sentir y reaccionar.</p>
     </section>
 
-
-    <!-- Espacio para imagen -->
-
-    <section class="imagen-sistema">
-
-        <img
-            src="Imagenes/Sistema-circulatorio.jpg"
-            alt="Sistema Nervioso"
-        >
-
+    <section class="card">
+      <h2>¿Qué es?</h2>
+      <p>Es el sistema que recibe información del cuerpo y del entorno, la procesa y envía respuestas para que podamos actuar.</p>
     </section>
 
-    <section class="recurso-sistema">
+    <section class="card">
+      <h2>¿Cómo funciona?</h2>
+      <p>El cerebro interpreta señales y se comunica con el cuerpo mediante la médula espinal y una gran red de nervios.</p>
+    </section>
 
-    <h3>🎬 Explora el sistema nervioso</h3>
+    <section class="card full-width">
+      <h2>Partes y funciones principales</h2>
 
-    <div class="video-contenedor">
+      <div class="parts-grid">
+        <article class="part-item"><h3>Cerebro</h3><p>Piensa, recuerda y controla muchas funciones del cuerpo.</p></article>
+        <article class="part-item"><h3>Médula espinal</h3><p>Conecta el cerebro con el resto del organismo.</p></article>
+        <article class="part-item"><h3>Nervios</h3><p>Llevan mensajes rápidos a distintas partes del cuerpo.</p></article>
+        <article class="part-item"><h3>Sentidos</h3><p>Reciben información como luz, sonidos, olores y texturas.</p></article>
+      </div>
+    </section>
 
-        <video controls>
-            <source src="Imagenes/El Sistema Nervioso _ Videos Educativos para Niños.mp4" type="video/mp4">
+    <section class="card full-width media-card">
+      <h2>Video educativo</h2>
 
-            Tu navegador no puede reproducir este video.
-        </video>
+      <video controls preload="metadata">
+        <source src="Imagenes/El Sistema Nervioso _ Videos Educativos para Niños.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </section>
 
-    </div>
+    <section class="card full-width game-card">
+      <h2>Zona de juego</h2>
 
+      <div class="game-placeholder">
+        <span>🎮</span>
+        <div>
+          <h3>Próximamente: misión cerebral</h3>
+          <p>Aquí puedes agregar un juego de preguntas sobre el cerebro, los nervios y los sentidos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card full-width">
+      <h2>Cómo cuidarlo</h2>
+      <ul class="care-list">
+        <li>Duerme bien cada noche.</li>
+        <li>Come alimentos saludables.</li>
+        <li>Haz ejercicio y mantente activo.</li>
+        <li>Protege tu cabeza al practicar deportes.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <button class="btn-back" onclick="closeSystem()">Cerrar sección</button>
+  </footer>
 </main>
 
+<script>
+  function openSystem() {
+    document.getElementById("welcome-screen").classList.add("hidden");
+    const main = document.getElementById("main-interface");
+    main.classList.add("active");
+    main.setAttribute("aria-hidden", "false");
+  }
+
+  function closeSystem() {
+    const main = document.getElementById("main-interface");
+    main.classList.remove("active");
+    main.setAttribute("aria-hidden", "true");
+    document.getElementById("welcome-screen").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
 
 </body>
-
 </html>

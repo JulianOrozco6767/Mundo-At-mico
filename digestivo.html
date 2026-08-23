@@ -1,158 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema Digestivo | Mundo Atómico</title>
-
-    <link rel="stylesheet" href="digestivo.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Digestivo | Mundo Atómico</title>
+  <link rel="stylesheet" href="digestivo.css">
 </head>
-
-
 <body>
 
+<section id="welcome-screen">
+  <p class="eyebrow">Mundo Atómico</p>
+  <h1>🍎 Sistema Digestivo</h1>
+  <p>Descubre cómo tu cuerpo transforma los alimentos en energía.</p>
+  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
+  <a class="home-link" href="index.html">← Volver al inicio</a>
+</section>
 
-<!-- =========================================
-                HEADER
-========================================= -->
-
-<header>
-
-    <!-- Logo -->
-
-    <div class="logo">
-
-        <img
-            src="Imagenes/Mundo Atomico Logo.jpeg"
-            alt="Logo de Mundo Atómico"
-        >
-
-        <div class="titulo">
-
-            <h1>Mundo Atómico</h1>
-
-            <p>Aprende y Descubre</p>
-
-        </div>
-
-    </div>
-
-
-    <!-- Botón Inicio -->
-
-    <a href="index.html" class="boton-inicio">
-
-        <i class="fa-solid fa-house"></i>
-
-        Inicio
-
+<main id="main-interface">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
+      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
     </a>
+    <a class="btn-home" href="index.html">Inicio</a>
+  </header>
 
-
-</header>
-
-
-
-<!-- =========================================
-             CONTENIDO PRINCIPAL
-========================================= -->
-
-<main class="contenido-sistema">
-
-
-    <!-- Título -->
-
-    <h2>🍎 Sistema Digestivo</h2>
-
-
-    <!-- Descripción -->
-
-    <section class="descripcion-sistema">
-
-        <h3>¿Qué es?</h3>
-
-        <p>
-
-            El sistema nervioso controla y coordina nuestro cuerpo.
-            Nos permite pensar, sentir, aprender y responder a lo que
-            sucede a nuestro alrededor.
-
-        </p>
-
-        <p>
-
-            Está formado por diferentes partes que trabajan juntas
-            para recibir información, procesarla y enviar respuestas
-            a nuestro cuerpo.
-
-        </p>
-
+  <div class="content-body">
+    <section class="title-block full-width">
+      <p class="eyebrow">Sistema del cuerpo humano</p>
+      <h1>🍎 Sistema Digestivo</h1>
+      <p>Convierte la comida en nutrientes y energía para tu cuerpo.</p>
     </section>
 
-
-    <!-- Espacio para imagen -->
-
-    <section class="imagen-sistema">
-
-        <img
-            src="Imagenes/sistema-nervioso.png"
-            alt="Sistema Nervioso"
-        >
-
+    <section class="card">
+      <h2>¿Qué es?</h2>
+      <p>Es el sistema que procesa los alimentos para obtener los nutrientes que necesitamos para vivir y crecer.</p>
     </section>
 
-
-
-    <!-- =========================================
-              MÁS CONTENIDO DESPUÉS
-    ========================================= -->
-
-    <section class="informacion-extra">
-
-        <h3>🔎 Conozcamos más</h3>
-
-        <p>
-
-            Aquí puedes agregar más información sobre el sistema,
-            sus órganos, sus funciones y datos interesantes.
-
-        </p>
-
+    <section class="card">
+      <h2>¿Cómo funciona?</h2>
+      <p>La comida se mastica, viaja por el cuerpo y se transforma hasta que los nutrientes pasan a la sangre.</p>
     </section>
 
-    <section class="modelo-3d">
+    <section class="card full-width">
+      <h2>Partes y funciones principales</h2>
 
-    <h3>🫀 Explora el aparato cardiovascular</h3>
+      <div class="parts-grid">
+        <article class="part-item"><h3>Boca</h3><p>Mastica los alimentos y los mezcla con saliva.</p></article>
+        <article class="part-item"><h3>Estómago</h3><p>Mezcla y descompone la comida.</p></article>
+        <article class="part-item"><h3>Intestino delgado</h3><p>Absorbe la mayoría de nutrientes.</p></article>
+        <article class="part-item"><h3>Intestino grueso</h3><p>Absorbe agua y forma los desechos.</p></article>
+      </div>
+    </section>
 
-    <iframe
-        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/aparato-cardiovascular"
-        title="Modelo 3D del aparato cardiovascular"
-        allowfullscreen>
-    </iframe>
+    <section class="card full-width">
+      <h2>Video educativo</h2>
+      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema digestivo.</div>
+    </section>
 
+    <section class="card full-width game-card">
+      <h2>Zona de juego</h2>
+      <div class="game-placeholder">
+        <span>🎮</span>
+        <div>
+          <h3>Próximamente: el viaje de los alimentos</h3>
+          <p>Aquí puedes agregar un juego para ordenar el recorrido de la comida en el cuerpo.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="card full-width">
+      <h2>Cómo cuidarlo</h2>
+      <ul class="care-list">
+        <li>Come frutas y verduras.</li>
+        <li>Bebe suficiente agua.</li>
+        <li>Mastica bien los alimentos.</li>
+        <li>Lávate las manos antes de comer.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
 </main>
 
+<script>
+  function openSystem() {
+    document.getElementById("welcome-screen").classList.add("hidden");
+    document.getElementById("main-interface").classList.add("active");
+  }
+
+  function closeSystem() {
+    document.getElementById("main-interface").classList.remove("active");
+    document.getElementById("welcome-screen").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
 
 </body>
-
 </html>
