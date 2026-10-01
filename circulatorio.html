@@ -3,167 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sistema Circulatorio | Mundo Atómico</title>
+
     <link rel="stylesheet" href="circulatorio.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <section id="welcome-screen" aria-labelledby="welcome-title">
-        <p class="eyebrow">Mundo Atómico</p>
-        <h1 id="welcome-title">Sistema Circulatorio</h1>
-        <p>Conoce el viaje de la sangre, las partes que forman este sistema y cómo puedes cuidarlo.</p>
-        <button class="btn-launch" type="button" onclick="openCirculatorySystem()">Explorar el sistema</button>
-        <a class="home-link" href="index.html">← Volver al inicio</a>
+
+<section id="welcome-screen" aria-labelledby="welcome-title">
+
+    <p class="eyebrow">Mundo Atómico</p>
+
+    <h1 id="welcome-title">Sistema Circulatorio</h1>
+
+    <p>
+        Conoce cómo la sangre recorre tu cuerpo y cómo el corazón
+        trabaja para mantenerte con energía.
+    </p>
+
+    <button class="btn-launch" type="button"
+        onclick="openCirculatorySystem()">
+        Explorar el sistema
+    </button>
+
+    <a class="home-link" href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        Volver al inicio
+    </a>
+
+</section>
+
+
+<main id="main-interface" aria-hidden="true">
+
+<header class="site-header">
+
+    <a class="brand" href="index.html">
+
+        <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
+
+        <span>
+            <strong>Mundo Atómico</strong>
+            <small>Aprende y descubre</small>
+        </span>
+
+    </a>
+
+    <a class="btn-home" href="index.html">
+        <i class="fa-solid fa-house"></i>
+        Inicio
+    </a>
+
+</header>
+
+
+<div class="content-body">
+
+    <section class="title-block full-width">
+
+        <p class="eyebrow">Sistema del cuerpo humano</p>
+
+        <h1>
+            <i class="fa-solid fa-heart-pulse"></i>
+            Sistema Circulatorio
+        </h1>
+
+        <p>
+            Una red de transporte que lleva oxígeno, nutrientes
+            y otras sustancias por todo nuestro cuerpo.
+        </p>
+
     </section>
 
-    <main id="main-interface" aria-hidden="true">
-        <header class="site-header">
-            <a class="brand" href="index.html">
-                <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-                <span>
-                    <strong>Mundo Atómico</strong>
-                    <small>Aprende y descubre</small>
-                </span>
-            </a>
 
-            <a class="btn-home" href="index.html">Inicio</a>
-        </header>
+    <!-- ¿QUÉ ES? -->
 
-        <div class="content-body">
-            <section class="title-block full-width">
-                <p class="eyebrow">Sistema del cuerpo humano</p>
-                <h1>🫀 Sistema Circulatorio</h1>
-                <p>Una red de transporte que lleva oxígeno y nutrientes a cada parte de tu cuerpo.</p>
-            </section>
+    <section class="card">
 
-            <section class="card">
-                <h2>¿Qué es?</h2>
+        <h2>¿Qué es?</h2>
+
+        <p>
+            El sistema circulatorio es el encargado de transportar
+            la sangre por todo el cuerpo. Está formado principalmente
+            por el corazón, la sangre y los vasos sanguíneos.
+        </p>
+
+    </section>
+
+
+    <!-- ¿CÓMO FUNCIONA? -->
+
+    <section class="card">
+
+        <h2>¿Cómo funciona?</h2>
+
+        <p>
+            El corazón bombea la sangre hacia los pulmones para
+            recoger oxígeno. Después, la sangre viaja hacia
+            diferentes partes del cuerpo y lleva el oxígeno
+            y los nutrientes que necesitan las células.
+        </p>
+
+    </section>
+
+
+    <!-- PARTES -->
+
+    <section class="card full-width">
+
+        <h2>Partes principales</h2>
+
+        <div class="parts-grid">
+
+            <article class="part-item">
+
+                <h3>
+                    <i class="fa-solid fa-heart"></i>
+                    Corazón
+                </h3>
+
                 <p>
-                    Es el sistema formado por el corazón, la sangre y los vasos sanguíneos.
-                    Trabajan en equipo para transportar sustancias importantes por todo el cuerpo.
+                    Es un órgano muscular que bombea la sangre
+                    continuamente por todo el cuerpo.
                 </p>
-            </section>
 
-            <section class="card">
-                <h2>¿Cómo funciona?</h2>
+            </article>
+
+
+            <article class="part-item">
+
+                <h3>
+                    <i class="fa-solid fa-droplet"></i>
+                    Sangre
+                </h3>
+
                 <p>
-                    El corazón bombea la sangre hacia los pulmones para recibir oxígeno y después
-                    la impulsa al resto del cuerpo. Las venas la ayudan a regresar al corazón.
+                    Transporta oxígeno, nutrientes y otras
+                    sustancias necesarias para el organismo.
                 </p>
-            </section>
 
-            <section class="card full-width">
-                <h2>Partes y funciones principales</h2>
+            </article>
 
-                <div class="parts-grid">
-                    <article class="part-item">
-                        <h3>Corazón</h3>
-                        <p>Es el músculo que bombea la sangre sin detenerse.</p>
-                    </article>
 
-                    <article class="part-item">
-                        <h3>Arterias</h3>
-                        <p>Llevan la sangre desde el corazón hacia los órganos y tejidos.</p>
-                    </article>
+            <article class="part-item">
 
-                    <article class="part-item">
-                        <h3>Venas</h3>
-                        <p>Devuelven la sangre al corazón después de recorrer el cuerpo.</p>
-                    </article>
+                <h3>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    Arterias
+                </h3>
 
-                    <article class="part-item">
-                        <h3>Sangre</h3>
-                        <p>Transporta oxígeno, nutrientes y ayuda a proteger el organismo.</p>
-                    </article>
-                </div>
-            </section>
+                <p>
+                    Llevan la sangre desde el corazón hacia
+                    diferentes órganos y tejidos.
+                </p>
 
-            <section class="card media-card">
-                <h2>Imagen del sistema</h2>
+            </article>
 
-                <img
-                    class="system-image"
-                    src="Imagenes/Sistema-circulatorio.jpg"
-                    alt="Ilustración del sistema circulatorio"
-                >
-            </section>
 
-            <section class="card media-card">
-                <h2>Video educativo</h2>
+            <article class="part-item">
 
-                <video controls preload="metadata">
-                    <source
-                        src="Imagenes/EL SISTEMA CIRCULATORIO _ Vídeos Educativos para Niños de Primaria _ Happy Learning.mp4"
-                        type="video/mp4"
-                    >
-                    Tu navegador no puede reproducir este video.
-                </video>
-            </section>
+                <h3>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Venas
+                </h3>
 
-            <section class="card full-width game-card">
-                <h2>Zona de juego</h2>
+                <p>
+                    Transportan la sangre de regreso hacia
+                    el corazón.
+                </p>
 
-                <div class="game-placeholder">
-                    <span>🎮</span>
+            </article>
 
-                    <div>
-                        <h3>Próximamente: pon a prueba lo aprendido</h3>
-                        <p>
-                            Este espacio está preparado para agregar un juego, por ejemplo,
-                            uno de preguntas o de relacionar las partes del sistema circulatorio.
-                        </p>
-                    </div>
-                </div>
-            </section>
 
-            <section class="card full-width">
-                <h2>Cómo cuidarlo</h2>
+            <article class="part-item">
 
-                <ul class="care-list">
-                    <li>Haz actividad física con frecuencia.</li>
-                    <li>Prefiere alimentos variados, frutas y verduras.</li>
-                    <li>Bebe suficiente agua durante el día.</li>
-                    <li>Evita el consumo de tabaco.</li>
-                </ul>
-            </section>
+                <h3>
+                    <i class="fa-solid fa-microscope"></i>
+                    Capilares
+                </h3>
+
+                <p>
+                    Son vasos sanguíneos muy pequeños donde se
+                    intercambian sustancias entre la sangre y las células.
+                </p>
+
+            </article>
+
         </div>
 
-        <footer>
-            <button class="btn-back" type="button" onclick="closeCirculatorySystem()">
-                Cerrar sección
-            </button>
-        </footer>
-    </main>
+    </section>
 
-    <script>
-        function openCirculatorySystem() {
-            document.getElementById("welcome-screen").classList.add("hidden");
 
-            const main = document.getElementById("main-interface");
-            main.classList.add("active");
-            main.setAttribute("aria-hidden", "false");
+    <!-- IMPORTANCIA -->
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
+    <section class="card">
 
-        function closeCirculatorySystem() {
-            const main = document.getElementById("main-interface");
+        <h2>
+            <i class="fa-solid fa-earth-americas"></i>
+            ¿Por qué es importante?
+        </h2>
 
-            main.classList.remove("active");
-            main.setAttribute("aria-hidden", "true");
+        <p>
+            Es fundamental porque permite que el oxígeno y los
+            nutrientes lleguen a las células. También ayuda a
+            transportar sustancias que el cuerpo necesita eliminar.
+        </p>
 
-            document.getElementById("welcome-screen").classList.remove("hidden");
+    </section>
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    </script>
+
+    <!-- CURIOSIDAD -->
+
+    <section class="card">
+
+        <h2>
+            <i class="fa-solid fa-lightbulb"></i>
+            ¿Sabías que...?
+        </h2>
+
+        <p>
+            El corazón trabaja durante toda nuestra vida para
+            mantener la sangre circulando por el organismo.
+        </p>
+
+    </section>
+
+
+    <!-- CUIDADOS -->
+
+    <section class="card full-width">
+
+        <h2>
+            <i class="fa-solid fa-heart"></i>
+            Cómo cuidar tu sistema circulatorio
+        </h2>
+
+        <ul class="care-list">
+
+            <li>Realiza actividad física regularmente.</li>
+
+            <li>
+                Consume frutas y verduras como parte de una alimentación variada.
+            </li>
+
+            <li>
+                Bebe suficiente agua durante el día.
+            </li>
+
+            <li>
+                Descansa adecuadamente.
+            </li>
+
+            <li>
+                Evita el consumo de tabaco.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="card media-card">
+
+        <h2>
+            <i class="fa-solid fa-video"></i>
+            Video educativo
+        </h2>
+
+        <video controls preload="metadata">
+
+            <source
+                src="Imagenes/EL SISTEMA CIRCULATORIO _ Vídeos Educativos para Niños de Primaria _ Happy Learning.mp4"
+                type="video/mp4">
+
+            Tu navegador no puede reproducir este video.
+
+        </video>
+
+        <p class="derechos-video">
+            © Video educativo: <strong>Happy Learning</strong>.<br>
+            Contenido perteneciente a Happy Learning. Todos los derechos reservados.
+        </p>
+
+    </section>
+
+
+    <!-- MODELO 3D -->
+
+    <section class="card media-card">
+
+        <h2>
+            <i class="fa-solid fa-heart-pulse"></i>
+            Explora el sistema en 3D
+        </h2>
+
+        <div class="modelo-3d">
+
+            <iframe
+                src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/aparato-cardiovascular"
+                title="Modelo 3D del aparato cardiovascular"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- JUEGO -->
+
+    <section class="card full-width game-card">
+
+        <h2>
+            <i class="fa-solid fa-gamepad"></i>
+            Juego del Sistema Circulatorio
+        </h2>
+
+        <div class="game-placeholder">
+
+            <!-- COLOCA AQUÍ EL JUEGO CORRECTO DEL SISTEMA CIRCULATORIO -->
+
+            <iframe
+                src="TU-JUEGO-CIRCULATORIO"
+                title="Juego del Sistema Circulatorio"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<footer>
+
+    <button class="btn-back" type="button"
+        onclick="closeCirculatorySystem()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+        Cerrar sección
+
+    </button>
+
+</footer>
+
+</main>
+
+
+<script>
+
+function openCirculatorySystem() {
+
+    document.getElementById("welcome-screen").classList.add("hidden");
+
+    const main = document.getElementById("main-interface");
+
+    main.classList.add("active");
+
+    main.setAttribute("aria-hidden", "false");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+function closeCirculatorySystem() {
+
+    const main = document.getElementById("main-interface");
+
+    main.classList.remove("active");
+
+    main.setAttribute("aria-hidden", "true");
+
+    document.getElementById("welcome-screen").classList.remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
 </body>
 </html>

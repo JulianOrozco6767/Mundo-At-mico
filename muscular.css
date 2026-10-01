@@ -1,1 +1,1229 @@
-@import url("circulatorio.css");
+/* =========================================================
+   MUNDO ATÓMICO
+   SISTEMA MUSCULAR
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --bg: #080c14;
+    --surface: rgba(19, 31, 50, 0.9);
+
+    --cyan: #00c8ff;
+    --blue: #1e73be;
+    --yellow: #ffd54f;
+
+    --text: #f8fafc;
+    --muted: #c9d8e8;
+
+    --border: rgba(255, 255, 255, 0.13);
+
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0, 200, 255, 0.08),
+            transparent 40%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+/* =========================================================
+   PANTALLA INICIAL
+   ========================================================= */
+
+#welcome-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(0, 200, 255, 0.16),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(30, 115, 190, 0.15),
+            transparent 30%
+        ),
+
+        #080c14;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+
+}
+
+
+#welcome-screen.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.eyebrow {
+
+    margin: 0 0 10px;
+
+    color: var(--cyan);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+#welcome-screen h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: clamp(42px, 7vw, 76px);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+}
+
+
+#welcome-screen > p:not(.eyebrow) {
+
+    max-width: 650px;
+
+    margin: 22px auto 30px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   BOTÓN EXPLORAR
+   ========================================================= */
+
+.btn-launch {
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+
+    color: white;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 200, 255, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.btn-launch:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 200, 255, 0.28);
+
+}
+
+
+.btn-launch:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   ENLACE INICIO
+   ========================================================= */
+
+.home-link {
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.home-link:hover {
+
+    color: var(--cyan);
+
+}
+
+
+/* =========================================================
+   INTERFAZ PRINCIPAL
+   ========================================================= */
+
+#main-interface {
+
+    display: none;
+
+    min-height: 100vh;
+
+}
+
+
+#main-interface.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    width: 100%;
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 30px;
+
+    background:
+        rgba(8, 12, 20, 0.92);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+}
+
+
+.brand img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.brand span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+
+}
+
+
+.brand strong {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 20px;
+
+}
+
+
+.brand small {
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.btn-home {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border:
+        1px solid rgba(0, 200, 255, 0.35);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 200, 255, 0.06);
+
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.btn-home:hover {
+
+    background:
+        rgba(0, 200, 255, 0.13);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.content-body {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 40px)
+        );
+
+    margin: 42px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 25px;
+
+}
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.title-block {
+
+    padding: 10px 10px 20px;
+
+    text-align: center;
+
+}
+
+
+.title-block h1 {
+
+    margin: 0;
+
+    color: var(--cyan);
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: clamp(34px, 5vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 0 18px rgba(0, 200, 255, 0.15);
+
+}
+
+
+.title-block p:not(.eyebrow) {
+
+    max-width: 750px;
+
+    margin: 15px auto 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.card {
+
+    padding: 27px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(0, 200, 255, 0.28);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.24);
+
+}
+
+
+.card h2 {
+
+    margin: 0 0 18px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid rgba(0, 200, 255, 0.18);
+
+    color: var(--cyan);
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 25px;
+
+}
+
+
+.card p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   PARTES
+   ========================================================= */
+
+.parts-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(190px, 1fr)
+        );
+
+    gap: 16px;
+
+}
+
+
+.part-item {
+
+    padding: 19px;
+
+    background:
+        rgba(0, 200, 255, 0.035);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.part-item:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(0, 200, 255, 0.3);
+
+    background:
+        rgba(0, 200, 255, 0.06);
+
+}
+
+
+.part-item h3 {
+
+    margin: 0 0 10px;
+
+    color: var(--text);
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 19px;
+
+}
+
+
+.part-item p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+
+.system-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: contain;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+/* =========================================================
+   MULTIMEDIA
+   ========================================================= */
+
+.media-card {
+
+    grid-column: 1 / -1;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.media-card video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 600px;
+
+    margin-top: 15px;
+
+    background: #000;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================================
+   DERECHOS
+   ========================================================= */
+
+.derechos-video {
+
+    margin: 12px auto 0;
+
+    max-width: 90%;
+
+    text-align: center;
+
+    font-size: 13px !important;
+
+    line-height: 1.5 !important;
+
+    color: var(--muted);
+
+    opacity: 0.85;
+
+}
+
+
+.derechos-video strong {
+
+    color: var(--cyan);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   MODELO 3D
+   ========================================================= */
+
+.modelo-3d {
+
+    width: 100%;
+
+    height: 550px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    background:
+        rgba(0, 0, 0, 0.2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+.modelo-3d iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =========================================================
+   CUIDADOS
+   ========================================================= */
+
+.care-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px 25px;
+
+    margin: 0;
+
+    padding-left: 20px;
+
+    color: var(--muted);
+
+}
+
+
+.care-list li {
+
+    padding-left: 5px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+.care-list li::marker {
+
+    color: var(--cyan);
+
+}
+
+
+/* =========================================================
+   JUEGO
+   ========================================================= */
+
+.game-card {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.game-placeholder {
+
+    width: 100%;
+
+    min-height: 600px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    background:
+        rgba(0, 0, 0, 0.2);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+.game-placeholder iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 600px;
+
+    border: none;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 0 20px 45px;
+
+}
+
+
+.btn-back {
+
+    padding: 11px 22px;
+
+    border:
+        1px solid rgba(0, 200, 255, 0.3);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 200, 255, 0.05);
+
+    color: var(--cyan);
+
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.btn-back:hover {
+
+    background:
+        rgba(0, 200, 255, 0.12);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+   ========================================================= */
+
+#main-interface.active .content-body {
+
+    animation:
+        contentAppear 0.6s ease both;
+
+}
+
+
+@keyframes contentAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   SELECCIÓN
+   ========================================================= */
+
+::selection {
+
+    background: var(--cyan);
+
+    color: #080c14;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 9px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #080c14;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(0, 200, 255, 0.35);
+
+    border-radius: 20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        rgba(0, 200, 255, 0.55);
+
+}
+
+
+/* =========================================================
+   TABLETS Y CELULARES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+
+        padding: 10px 16px;
+
+    }
+
+
+    .brand img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand strong {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand small {
+
+        font-size: 10px;
+
+    }
+
+
+    .btn-home {
+
+        padding: 8px 13px;
+
+        font-size: 13px;
+
+    }
+
+
+    .content-body {
+
+        width:
+            calc(100% - 24px);
+
+        margin: 28px auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .full-width {
+
+        grid-column: 1;
+
+    }
+
+
+    .card {
+
+        padding: 21px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .card p {
+
+        font-size: 15px;
+
+    }
+
+
+    .parts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .care-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .modelo-3d {
+
+        height: 400px;
+
+    }
+
+
+    .system-image {
+
+        height: 350px;
+
+    }
+
+
+    .media-card video {
+
+        aspect-ratio: 16 / 9;
+
+        max-height: none;
+
+    }
+
+
+    .game-placeholder {
+
+        min-height: 400px;
+
+    }
+
+
+    .game-placeholder iframe {
+
+        height: 400px;
+
+    }
+
+
+    #welcome-screen {
+
+        padding: 25px 20px;
+
+    }
+
+
+    #welcome-screen h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    #welcome-screen > p:not(.eyebrow) {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .site-header {
+
+        min-height: 68px;
+
+    }
+
+
+    .brand span {
+
+        display: none;
+
+    }
+
+
+    .title-block h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .title-block p:not(.eyebrow) {
+
+        font-size: 15px;
+
+    }
+
+
+    .modelo-3d {
+
+        height: 330px;
+
+    }
+
+
+    .system-image {
+
+        height: 280px;
+
+    }
+
+
+    .game-placeholder {
+
+        min-height: 320px;
+
+    }
+
+
+    .game-placeholder iframe {
+
+        height: 320px;
+
+    }
+
+}

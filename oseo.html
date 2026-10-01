@@ -1,100 +1,689 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Óseo | Mundo Atómico</title>
-  <link rel="stylesheet" href="oseo.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Óseo | Mundo Atómico</title>
+
+    <link rel="stylesheet" href="oseo.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
 
-<section id="welcome-screen">
-  <p class="eyebrow">Mundo Atómico</p>
-  <h1>🦴 Sistema Óseo</h1>
-  <p>Conoce los huesos que dan forma, sostén y protección a tu cuerpo.</p>
-  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
-  <a class="home-link" href="index.html">← Volver al inicio</a>
-</section>
+    <!-- PANTALLA INICIAL -->
 
-<main id="main-interface" aria-hidden="true">
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
-    </a>
-    <a class="btn-home" href="index.html">Inicio</a>
-  </header>
+    <section id="welcome-screen">
 
-  <div class="content-body">
-    <section class="title-block full-width">
-      <p class="eyebrow">Sistema del cuerpo humano</p>
-      <h1>🦴 Sistema Óseo</h1>
-      <p>La estructura fuerte que sostiene y protege tu cuerpo.</p>
+        <p class="eyebrow">Mundo Atómico</p>
+
+        <h1>
+            <i class="fa-solid fa-bone"></i>
+            Sistema Óseo
+        </h1>
+
+        <p>
+            Conoce los huesos que dan forma, sostén y protección a tu cuerpo.
+        </p>
+
+        <button
+            class="btn-launch"
+            type="button"
+            onclick="openSystem()">
+
+            Explorar el sistema
+
+        </button>
+
+        <a class="home-link" href="index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+
     </section>
 
-    <section class="card">
-      <h2>¿Qué es?</h2>
-      <p>Es el conjunto de huesos que forma el esqueleto y da soporte al cuerpo humano.</p>
-    </section>
 
-    <section class="card">
-      <h2>¿Cómo funciona?</h2>
-      <p>Los huesos trabajan junto con articulaciones y músculos para permitirnos movernos y proteger órganos importantes.</p>
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
 
-    <section class="card full-width">
-      <h2>Partes y funciones principales</h2>
+    <main id="main-interface" aria-hidden="true">
 
-      <div class="parts-grid">
-        <article class="part-item"><h3>Cráneo</h3><p>Protege el cerebro.</p></article>
-        <article class="part-item"><h3>Columna vertebral</h3><p>Sostiene el cuerpo y protege la médula espinal.</p></article>
-        <article class="part-item"><h3>Costillas</h3><p>Protegen el corazón y los pulmones.</p></article>
-        <article class="part-item"><h3>Articulaciones</h3><p>Unen los huesos y permiten el movimiento.</p></article>
-      </div>
-    </section>
+        <!-- ENCABEZADO -->
 
-    <section class="card full-width">
-      <h2>Video educativo</h2>
-      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema óseo.</div>
-    </section>
+        <header class="site-header">
 
-    <section class="card full-width game-card">
-      <h2>Zona de juego</h2>
-      <div class="game-placeholder">
-        <span>🎮</span>
-        <div>
-          <h3>Próximamente: arma el esqueleto</h3>
-          <p>Este espacio puede incluir un juego para ubicar cada hueso en el lugar correcto.</p>
+            <a class="brand" href="index.html">
+
+                <img
+                    src="Imagenes/Mundo Atomico Logo.jpeg"
+                    alt="Logo de Mundo Atómico">
+
+                <span>
+                    <strong>Mundo Atómico</strong>
+                    <small>Aprende y descubre</small>
+                </span>
+
+            </a>
+
+            <a class="btn-home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+
+        </header>
+
+
+        <!-- CUERPO -->
+
+        <div class="content-body">
+
+
+            <!-- TÍTULO -->
+
+            <section class="title-block full-width">
+
+                <p class="eyebrow">
+                    Sistema del cuerpo humano
+                </p>
+
+                <h1>
+                    <i class="fa-solid fa-bone"></i>
+                    Sistema Óseo
+                </h1>
+
+                <p>
+                    La estructura que sostiene, protege y da forma a nuestro cuerpo.
+                </p>
+
+            </section>
+
+
+            <!-- ¿QUÉ ES? -->
+
+            <section class="card">
+
+                <h2>¿Qué es?</h2>
+
+                <p>
+                    El sistema óseo es el conjunto de huesos que forma el
+                    esqueleto humano. Los huesos proporcionan soporte y ayudan
+                    a mantener la forma del cuerpo.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Además, trabajan junto con los músculos y las articulaciones
+                    para permitir diferentes movimientos.
+                </p>
+
+            </section>
+
+
+            <!-- ¿CÓMO FUNCIONA? -->
+
+            <section class="card">
+
+                <h2>¿Cómo funciona?</h2>
+
+                <p>
+                    Los huesos funcionan como una estructura de soporte para
+                    el cuerpo y se unen entre sí mediante articulaciones.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Los músculos se conectan a los huesos y, al contraerse,
+                    ayudan a producir movimientos en diferentes partes del
+                    cuerpo.
+                </p>
+
+            </section>
+
+
+            <!-- FUNCIONES -->
+
+            <section class="card full-width">
+
+                <h2>Funciones del sistema óseo</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person"></i>
+                            Sostén
+                        </h3>
+
+                        <p>
+                            Los huesos forman una estructura que sostiene el
+                            cuerpo y ayuda a mantener su forma.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Protección
+                        </h3>
+
+                        <p>
+                            Algunos huesos protegen órganos importantes,
+                            como el cráneo al cerebro y las costillas al
+                            corazón y los pulmones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person-running"></i>
+                            Movimiento
+                        </h3>
+
+                        <p>
+                            Los huesos, las articulaciones y los músculos
+                            trabajan juntos para permitir el movimiento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-droplet"></i>
+                            Formación de células
+                        </h3>
+
+                        <p>
+                            En el interior de algunos huesos se encuentra la
+                            médula ósea, relacionada con la formación de
+                            células sanguíneas.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PARTES -->
+
+            <section class="card full-width">
+
+                <h2>Huesos y estructuras principales</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bone"></i>
+                            Cráneo
+                        </h3>
+
+                        <p>
+                            Protege el cerebro y forma la estructura de la
+                            cabeza.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person"></i>
+                            Columna vertebral
+                        </h3>
+
+                        <p>
+                            Está formada por vértebras y ayuda a sostener el
+                            cuerpo y proteger la médula espinal.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bone"></i>
+                            Costillas
+                        </h3>
+
+                        <p>
+                            Forman parte de la caja torácica y ayudan a
+                            proteger órganos como el corazón y los pulmones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bone"></i>
+                            Húmero
+                        </h3>
+
+                        <p>
+                            Es un hueso largo ubicado en la parte superior
+                            del brazo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bone"></i>
+                            Fémur
+                        </h3>
+
+                        <p>
+                            Es el hueso largo que se encuentra en el muslo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bone"></i>
+                            Tibia
+                        </h3>
+
+                        <p>
+                            Es uno de los principales huesos de la parte
+                            inferior de la pierna.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-link"></i>
+                            Articulaciones
+                        </h3>
+
+                        <p>
+                            Son zonas donde se unen dos o más huesos y
+                            permiten diferentes tipos de movimiento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person"></i>
+                            Pelvis
+                        </h3>
+
+                        <p>
+                            Es una estructura ósea que conecta el tronco con
+                            las extremidades inferiores y ayuda a sostener
+                            parte del cuerpo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- TIPOS DE HUESOS -->
+
+            <section class="card full-width">
+
+                <h2>Tipos de huesos</h2>
+
+                <p>
+                    Los huesos pueden tener diferentes formas y tamaños.
+                    Según su forma, se pueden clasificar en varios grupos.
+                </p>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>Huesos largos</h3>
+
+                        <p>
+                            Son más largos que anchos y se encuentran, por
+                            ejemplo, en brazos y piernas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Huesos cortos</h3>
+
+                        <p>
+                            Tienen una forma más compacta y se encuentran
+                            principalmente en zonas como las manos y los pies.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Huesos planos</h3>
+
+                        <p>
+                            Suelen ser relativamente planos y pueden ayudar
+                            a proteger órganos. El cráneo y algunas costillas
+                            son ejemplos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Huesos irregulares</h3>
+
+                        <p>
+                            Tienen formas más variadas. Las vértebras son
+                            un ejemplo de este tipo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ARTICULACIONES -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-link"></i>
+                    Las articulaciones
+                </h2>
+
+                <p>
+                    Las articulaciones son los lugares donde se encuentran
+                    dos o más huesos. Algunas permiten mucho movimiento,
+                    mientras que otras permiten poco o prácticamente nada.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Gracias a las articulaciones podemos realizar movimientos
+                    como doblar los brazos, caminar o girar diferentes partes
+                    del cuerpo.
+                </p>
+
+            </section>
+
+
+            <!-- MÉDULA ÓSEA -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-droplet"></i>
+                    La médula ósea
+                </h2>
+
+                <p>
+                    La médula ósea se encuentra en el interior de algunos
+                    huesos. Una de sus funciones importantes es participar
+                    en la producción de células sanguíneas.
+                </p>
+
+            </section>
+
+
+            <!-- IMPORTANCIA -->
+
+            <section class="card full-width">
+
+                <h2>¿Por qué es importante?</h2>
+
+                <p>
+                    El sistema óseo es fundamental para nuestro cuerpo porque
+                    proporciona soporte, protege órganos y permite que podamos
+                    movernos junto con los músculos y las articulaciones.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    También participa en procesos importantes relacionados
+                    con la producción de células sanguíneas y sirve como
+                    reserva de minerales para el organismo.
+                </p>
+
+            </section>
+
+
+            <!-- CURIOSIDAD -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    ¿Sabías que...?
+                </h2>
+
+                <p>
+                    El esqueleto humano de un adulto normalmente tiene
+                    alrededor de 206 huesos.
+                </p>
+
+            </section>
+
+
+            <!-- VIDEO -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-video"></i>
+                    Video educativo
+                </h2>
+
+                <video
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="Imagenes/5 COSAS QUE NO SABÍAS DEL ESQUELETO HUMANO _ CURIOSIDADES FASCINANTES PARA NIÑOS.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <p class="derechos-video">
+                    © Video educativo: <strong>Happy Learning</strong>.<br>
+                    Contenido perteneciente a Happy Learning. Todos los derechos reservados.
+                </p>
+
+            </section>
+
+
+            <!-- MODELO 3D -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-bone"></i>
+                    Explora el sistema en 3D
+                </h2>
+
+                <p>
+                    Observa el esqueleto humano desde diferentes ángulos
+                    y explora sus principales estructuras.
+                </p>
+
+                <div class="modelo-3d">
+
+                    <iframe
+                        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/sistema-esquel%C3%A9tico"
+                        title="Modelo 3D del sistema óseo"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUIDADOS -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Cómo cuidarlo
+                </h2>
+
+                <ul class="care-list">
+
+                    <li>
+                        Consume alimentos variados que aporten calcio y otros
+                        nutrientes importantes.
+                    </li>
+
+                    <li>
+                        Realiza actividad física de manera regular.
+                    </li>
+
+                    <li>
+                        Mantén una buena postura durante tus actividades.
+                    </li>
+
+                    <li>
+                        Utiliza protección adecuada al practicar deportes
+                        o montar bicicleta.
+                    </li>
+
+                    <li>
+                        Evita hábitos que puedan aumentar el riesgo de
+                        lesiones.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- JUEGO -->
+
+            <section class="card full-width game-card">
+
+                <h2>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Juego del Sistema Óseo
+                </h2>
+
+                <p>
+                    Pon a prueba lo que aprendiste sobre los huesos y el
+                    sistema óseo.
+                </p>
+
+                <div class="game-placeholder">
+
+                    <iframe
+                        src="https://es.educaplay.com/recursos-educativos/30565227-sistema_oseo_infantil.html"
+                        title="Juego del Sistema Óseo"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
         </div>
-      </div>
-    </section>
 
-    <section class="card full-width">
-      <h2>Cómo cuidarlo</h2>
-      <ul class="care-list">
-        <li>Consume alimentos con calcio.</li>
-        <li>Haz actividad física.</li>
-        <li>Mantén una buena postura.</li>
-        <li>Usa protección al montar bicicleta.</li>
-      </ul>
-    </section>
-  </div>
 
-  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
-</main>
+        <!-- BOTÓN CERRAR -->
 
-<script>
-  function openSystem() {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    document.getElementById("main-interface").classList.add("active");
-  }
+        <footer>
 
-  function closeSystem() {
-    document.getElementById("main-interface").classList.remove("active");
-    document.getElementById("welcome-screen").classList.remove("hidden");
-    window.scrollTo(0, 0);
-  }
-</script>
+            <button
+                class="btn-back"
+                type="button"
+                onclick="closeSystem()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Cerrar sección
+
+            </button>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openSystem() {
+
+            document
+                .getElementById("welcome-screen")
+                .classList.add("hidden");
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.add("active");
+
+            main.setAttribute("aria-hidden", "false");
+
+        }
+
+
+        function closeSystem() {
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.remove("active");
+
+            main.setAttribute("aria-hidden", "true");
+
+            document
+                .getElementById("welcome-screen")
+                .classList.remove("hidden");
+
+            window.scrollTo(0, 0);
+
+        }
+
+    </script>
 
 </body>
+
 </html>

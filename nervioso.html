@@ -1,111 +1,595 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Nervioso | Mundo Atómico</title>
-  <link rel="stylesheet" href="nervioso.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Nervioso | Mundo Atómico</title>
+
+    <link rel="stylesheet" href="nervioso.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
 
-<section id="welcome-screen">
-  <p class="eyebrow">Mundo Atómico</p>
-  <h1>🧠 Sistema Nervioso</h1>
-  <p>Descubre cómo el cerebro, los nervios y la médula espinal coordinan tu cuerpo.</p>
-  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
-  <a class="home-link" href="index.html">← Volver al inicio</a>
-</section>
+    <!-- PANTALLA INICIAL -->
 
-<main id="main-interface" aria-hidden="true">
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
-    </a>
-    <a class="btn-home" href="index.html">Inicio</a>
-  </header>
+    <section id="welcome-screen">
 
-  <div class="content-body">
-    <section class="title-block full-width">
-      <p class="eyebrow">Sistema del cuerpo humano</p>
-      <h1>🧠 Sistema Nervioso</h1>
-      <p>El centro de control que te permite pensar, sentir y reaccionar.</p>
+        <p class="eyebrow">Mundo Atómico</p>
+
+        <h1>
+            <i class="fa-solid fa-brain"></i>
+            Sistema Nervioso
+        </h1>
+
+        <p>
+            Descubre cómo el cerebro, los nervios y la médula espinal
+            coordinan tu cuerpo.
+        </p>
+
+        <button
+            class="btn-launch"
+            type="button"
+            onclick="openSystem()">
+
+            Explorar el sistema
+
+        </button>
+
+        <a class="home-link" href="index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+
     </section>
 
-    <section class="card">
-      <h2>¿Qué es?</h2>
-      <p>Es el sistema que recibe información del cuerpo y del entorno, la procesa y envía respuestas para que podamos actuar.</p>
-    </section>
 
-    <section class="card">
-      <h2>¿Cómo funciona?</h2>
-      <p>El cerebro interpreta señales y se comunica con el cuerpo mediante la médula espinal y una gran red de nervios.</p>
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
 
-    <section class="card full-width">
-      <h2>Partes y funciones principales</h2>
+    <main id="main-interface" aria-hidden="true">
 
-      <div class="parts-grid">
-        <article class="part-item"><h3>Cerebro</h3><p>Piensa, recuerda y controla muchas funciones del cuerpo.</p></article>
-        <article class="part-item"><h3>Médula espinal</h3><p>Conecta el cerebro con el resto del organismo.</p></article>
-        <article class="part-item"><h3>Nervios</h3><p>Llevan mensajes rápidos a distintas partes del cuerpo.</p></article>
-        <article class="part-item"><h3>Sentidos</h3><p>Reciben información como luz, sonidos, olores y texturas.</p></article>
-      </div>
-    </section>
+        <!-- ENCABEZADO -->
 
-    <section class="card full-width media-card">
-      <h2>Video educativo</h2>
+        <header class="site-header">
 
-      <video controls preload="metadata">
-        <source src="Imagenes/El Sistema Nervioso _ Videos Educativos para Niños.mp4" type="video/mp4">
-        Tu navegador no puede reproducir este video.
-      </video>
-    </section>
+            <a class="brand" href="index.html">
 
-    <section class="card full-width game-card">
-      <h2>Zona de juego</h2>
+                <img
+                    src="Imagenes/Mundo Atomico Logo.jpeg"
+                    alt="Logo de Mundo Atómico">
 
-      <div class="game-placeholder">
-        <span>🎮</span>
-        <div>
-          <h3>Próximamente: misión cerebral</h3>
-          <p>Aquí puedes agregar un juego de preguntas sobre el cerebro, los nervios y los sentidos.</p>
+                <span>
+                    <strong>Mundo Atómico</strong>
+                    <small>Aprende y descubre</small>
+                </span>
+
+            </a>
+
+            <a class="btn-home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+
+        </header>
+
+
+        <!-- CUERPO -->
+
+        <div class="content-body">
+
+
+            <!-- TÍTULO -->
+
+            <section class="title-block full-width">
+
+                <p class="eyebrow">
+                    Sistema del cuerpo humano
+                </p>
+
+                <h1>
+                    <i class="fa-solid fa-brain"></i>
+                    Sistema Nervioso
+                </h1>
+
+                <p>
+                    El centro de control que te permite pensar, sentir,
+                    aprender y reaccionar ante lo que sucede a tu alrededor.
+                </p>
+
+            </section>
+
+
+            <!-- ¿QUÉ ES? -->
+
+            <section class="card">
+
+                <h2>¿Qué es?</h2>
+
+                <p>
+                    El sistema nervioso es el conjunto de órganos y estructuras
+                    que recibe información del cuerpo y del entorno, la procesa
+                    y coordina diferentes respuestas.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Gracias a este sistema podemos realizar acciones como
+                    movernos, hablar, recordar, aprender y percibir lo que
+                    sucede a nuestro alrededor.
+                </p>
+
+            </section>
+
+
+            <!-- ¿CÓMO FUNCIONA? -->
+
+            <section class="card">
+
+                <h2>¿Cómo funciona?</h2>
+
+                <p>
+                    El sistema nervioso funciona mediante señales que viajan
+                    entre el cerebro, la médula espinal y los nervios.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Cuando recibimos información, el cerebro y otras partes
+                    del sistema nervioso la procesan y generan una respuesta.
+                    Algunas respuestas pueden producirse de manera muy rápida,
+                    como retirar la mano al tocar algo caliente.
+                </p>
+
+            </section>
+
+
+            <!-- SISTEMA NERVIOSO CENTRAL Y PERIFÉRICO -->
+
+            <section class="card full-width">
+
+                <h2>Partes principales</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-brain"></i>
+                            Sistema nervioso central
+                        </h3>
+
+                        <p>
+                            Está formado principalmente por el cerebro y la
+                            médula espinal. Se encarga de procesar información
+                            y coordinar muchas respuestas del organismo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-link"></i>
+                            Sistema nervioso periférico
+                        </h3>
+
+                        <p>
+                            Está formado por los nervios que conectan el sistema
+                            nervioso central con diferentes partes del cuerpo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PARTES -->
+
+            <section class="card full-width">
+
+                <h2>Órganos y estructuras principales</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-brain"></i>
+                            Cerebro
+                        </h3>
+
+                        <p>
+                            Es una de las estructuras principales del sistema
+                            nervioso. Participa en el pensamiento, la memoria,
+                            el aprendizaje, las emociones y el control de
+                            diferentes acciones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-arrows-up-down"></i>
+                            Médula espinal
+                        </h3>
+
+                        <p>
+                            Es una estructura que conecta el cerebro con muchos
+                            nervios del cuerpo y participa en la transmisión
+                            de información.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-network-wired"></i>
+                            Nervios
+                        </h3>
+
+                        <p>
+                            Son estructuras que permiten transportar señales
+                            entre el sistema nervioso central y diferentes
+                            partes del organismo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-eye"></i>
+                            Órganos de los sentidos
+                        </h3>
+
+                        <p>
+                            Los ojos, oídos, nariz, lengua y piel reciben
+                            información del entorno que puede ser procesada
+                            por el sistema nervioso.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- NEURONAS -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-microscope"></i>
+                    Las neuronas
+                </h2>
+
+                <p>
+                    Las neuronas son células especializadas del sistema
+                    nervioso. Su función principal es recibir y transmitir
+                    información mediante señales.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Gracias a la comunicación entre millones de neuronas,
+                    nuestro cuerpo puede recibir información, procesarla y
+                    producir diferentes respuestas.
+                </p>
+
+            </section>
+
+
+            <!-- FUNCIONES -->
+
+            <section class="card full-width">
+
+                <h2>Funciones del sistema nervioso</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-eye"></i>
+                            Recibir información
+                        </h3>
+
+                        <p>
+                            Detecta información procedente del entorno y del
+                            propio cuerpo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-brain"></i>
+                            Procesar información
+                        </h3>
+
+                        <p>
+                            Analiza la información recibida y ayuda a
+                            determinar cómo responder.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person-running"></i>
+                            Controlar respuestas
+                        </h3>
+
+                        <p>
+                            Coordina acciones como el movimiento y otras
+                            respuestas del organismo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Pensar y aprender
+                        </h3>
+
+                        <p>
+                            Participa en procesos como la memoria, el
+                            aprendizaje, el pensamiento y las emociones.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- IMPORTANCIA -->
+
+            <section class="card">
+
+                <h2>¿Por qué es importante?</h2>
+
+                <p>
+                    El sistema nervioso es fundamental porque permite que el
+                    cuerpo reciba información, se comunique internamente y
+                    responda ante diferentes situaciones.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    También participa en funciones relacionadas con el
+                    movimiento, los sentidos, el pensamiento, la memoria y
+                    muchas actividades necesarias para la vida diaria.
+                </p>
+
+            </section>
+
+
+            <!-- CURIOSIDAD -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    ¿Sabías que...?
+                </h2>
+
+                <p>
+                    El cerebro puede recibir información de diferentes partes
+                    del cuerpo al mismo tiempo y procesarla para ayudarnos a
+                    responder a lo que ocurre a nuestro alrededor.
+                </p>
+
+            </section>
+
+
+            <!-- VIDEO -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-video"></i>
+                    Video educativo
+                </h2>
+
+                <video
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="Imagenes/El Sistema Nervioso _ Videos Educativos para Niños.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <p class="derechos-video">
+                    © Video educativo: <strong>Happy Learning</strong>.<br>
+                    Contenido perteneciente a Happy Learning. Todos los derechos reservados.
+                </p>
+
+            </section>
+
+
+            <!-- MODELO 3D -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-brain"></i>
+                    Explora el sistema en 3D
+                </h2>
+
+                <p>
+                    Observa el sistema nervioso desde diferentes ángulos y
+                    explora algunas de sus principales estructuras.
+                </p>
+
+                <div class="modelo-3d">
+
+                    <iframe
+                        title="Modelo 3D del sistema nervioso"
+                        src="https://sketchfab.com/models/600ffebad40342bab13741c631981a8b/embed"
+                        allowfullscreen
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true">
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUIDADOS -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Cómo cuidarlo
+                </h2>
+
+                <ul class="care-list">
+
+                    <li>
+                        Duerme bien cada noche.
+                    </li>
+
+                    <li>
+                        Come alimentos saludables y variados.
+                    </li>
+
+                    <li>
+                        Haz ejercicio y mantente activo.
+                    </li>
+
+                    <li>
+                        Protege tu cabeza al practicar deportes.
+                    </li>
+
+                    <li>
+                        Mantén buenos hábitos de descanso y estudio.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- JUEGO -->
+
+            <section class="card full-width game-card">
+
+                <h2>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Juego del Sistema Nervioso
+                </h2>
+
+                <p>
+                    Pon a prueba lo que aprendiste sobre el sistema nervioso
+                    con este juego educativo.
+                </p>
+
+                <div class="game-placeholder">
+
+                    <iframe
+                        src="https://es.educaplay.com/recursos-educativos/30565302-el_sistema_nervioso_para_ninos.html"
+                        title="Juego del Sistema Nervioso"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
         </div>
-      </div>
-    </section>
 
-    <section class="card full-width">
-      <h2>Cómo cuidarlo</h2>
-      <ul class="care-list">
-        <li>Duerme bien cada noche.</li>
-        <li>Come alimentos saludables.</li>
-        <li>Haz ejercicio y mantente activo.</li>
-        <li>Protege tu cabeza al practicar deportes.</li>
-      </ul>
-    </section>
-  </div>
 
-  <footer>
-    <button class="btn-back" onclick="closeSystem()">Cerrar sección</button>
-  </footer>
-</main>
+        <!-- BOTÓN CERRAR -->
 
-<script>
-  function openSystem() {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    const main = document.getElementById("main-interface");
-    main.classList.add("active");
-    main.setAttribute("aria-hidden", "false");
-  }
+        <footer>
 
-  function closeSystem() {
-    const main = document.getElementById("main-interface");
-    main.classList.remove("active");
-    main.setAttribute("aria-hidden", "true");
-    document.getElementById("welcome-screen").classList.remove("hidden");
-    window.scrollTo(0, 0);
-  }
-</script>
+            <button
+                class="btn-back"
+                type="button"
+                onclick="closeSystem()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Cerrar sección
+
+            </button>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openSystem() {
+
+            document
+                .getElementById("welcome-screen")
+                .classList.add("hidden");
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.add("active");
+
+            main.setAttribute("aria-hidden", "false");
+
+        }
+
+
+        function closeSystem() {
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.remove("active");
+
+            main.setAttribute("aria-hidden", "true");
+
+            document
+                .getElementById("welcome-screen")
+                .classList.remove("hidden");
+
+            window.scrollTo(0, 0);
+
+        }
+
+    </script>
 
 </body>
+
 </html>

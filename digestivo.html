@@ -1,100 +1,716 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Digestivo | Mundo Atómico</title>
-  <link rel="stylesheet" href="digestivo.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Digestivo | Mundo Atómico</title>
+
+    <link rel="stylesheet" href="digestivo.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
+
 <body>
 
-<section id="welcome-screen">
-  <p class="eyebrow">Mundo Atómico</p>
-  <h1>🍎 Sistema Digestivo</h1>
-  <p>Descubre cómo tu cuerpo transforma los alimentos en energía.</p>
-  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
-  <a class="home-link" href="index.html">← Volver al inicio</a>
-</section>
 
-<main id="main-interface">
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
-    </a>
-    <a class="btn-home" href="index.html">Inicio</a>
-  </header>
+    <!-- =====================================================
+         PANTALLA INICIAL
+         ===================================================== -->
 
-  <div class="content-body">
-    <section class="title-block full-width">
-      <p class="eyebrow">Sistema del cuerpo humano</p>
-      <h1>🍎 Sistema Digestivo</h1>
-      <p>Convierte la comida en nutrientes y energía para tu cuerpo.</p>
+    <section id="welcome-screen">
+
+        <p class="eyebrow">
+            Mundo Atómico
+        </p>
+
+        <h1>
+            <i class="fa-solid fa-apple-whole"></i>
+            Sistema Digestivo
+        </h1>
+
+        <p>
+            Descubre cómo tu cuerpo transforma los alimentos
+            en nutrientes y energía para funcionar correctamente.
+        </p>
+
+        <button
+            class="btn-launch"
+            type="button"
+            onclick="openSystem()">
+
+            Explorar el sistema
+
+        </button>
+
+        <a
+            class="home-link"
+            href="index.html">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+
+        </a>
+
     </section>
 
-    <section class="card">
-      <h2>¿Qué es?</h2>
-      <p>Es el sistema que procesa los alimentos para obtener los nutrientes que necesitamos para vivir y crecer.</p>
-    </section>
 
-    <section class="card">
-      <h2>¿Cómo funciona?</h2>
-      <p>La comida se mastica, viaja por el cuerpo y se transforma hasta que los nutrientes pasan a la sangre.</p>
-    </section>
 
-    <section class="card full-width">
-      <h2>Partes y funciones principales</h2>
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
 
-      <div class="parts-grid">
-        <article class="part-item"><h3>Boca</h3><p>Mastica los alimentos y los mezcla con saliva.</p></article>
-        <article class="part-item"><h3>Estómago</h3><p>Mezcla y descompone la comida.</p></article>
-        <article class="part-item"><h3>Intestino delgado</h3><p>Absorbe la mayoría de nutrientes.</p></article>
-        <article class="part-item"><h3>Intestino grueso</h3><p>Absorbe agua y forma los desechos.</p></article>
-      </div>
-    </section>
+    <main id="main-interface">
 
-    <section class="card full-width">
-      <h2>Video educativo</h2>
-      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema digestivo.</div>
-    </section>
 
-    <section class="card full-width game-card">
-      <h2>Zona de juego</h2>
-      <div class="game-placeholder">
-        <span>🎮</span>
-        <div>
-          <h3>Próximamente: el viaje de los alimentos</h3>
-          <p>Aquí puedes agregar un juego para ordenar el recorrido de la comida en el cuerpo.</p>
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
+
+        <header class="site-header">
+
+            <a
+                class="brand"
+                href="index.html">
+
+                <img
+                    src="Imagenes/Mundo Atomico Logo.jpeg"
+                    alt="Logo de Mundo Atómico">
+
+                <span>
+
+                    <strong>
+                        Mundo Atómico
+                    </strong>
+
+                    <small>
+                        Aprende y descubre
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                class="btn-home"
+                href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+                Inicio
+
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CUERPO PRINCIPAL
+             ================================================= -->
+
+        <div class="content-body">
+
+
+            <!-- =================================================
+                 TÍTULO
+                 ================================================= -->
+
+            <section class="title-block full-width">
+
+                <p class="eyebrow">
+                    Sistema del cuerpo humano
+                </p>
+
+                <h1>
+                    <i class="fa-solid fa-apple-whole"></i>
+                    Sistema Digestivo
+                </h1>
+
+                <p>
+                    El sistema que transforma los alimentos,
+                    obtiene sus nutrientes y ayuda a eliminar
+                    los desechos que el cuerpo no necesita.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ¿QUÉ ES?
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    ¿Qué es?
+                </h2>
+
+                <p>
+                    El sistema digestivo es el conjunto de órganos
+                    encargados de recibir los alimentos, procesarlos
+                    y convertirlos en sustancias más pequeñas que
+                    el cuerpo puede aprovechar.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Gracias a este proceso, nuestro organismo obtiene
+                    nutrientes y energía necesarios para crecer,
+                    moverse y realizar sus actividades diarias.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ¿CÓMO FUNCIONA?
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    ¿Cómo funciona?
+                </h2>
+
+                <p>
+                    La digestión comienza en la boca, donde los dientes
+                    trituran los alimentos y la saliva empieza a
+                    descomponerlos.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Después, los alimentos pasan por el esófago hasta
+                    llegar al estómago. Allí continúan siendo
+                    descompuestos y posteriormente pasan al intestino
+                    delgado, donde se absorbe gran parte de los
+                    nutrientes.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ETAPAS
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    Etapas de la digestión
+                </h2>
+
+                <div class="parts-grid">
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            1. Ingestión
+                        </h3>
+
+                        <p>
+                            Es el momento en que introducimos los
+                            alimentos y bebidas en la boca.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            2. Digestión
+                        </h3>
+
+                        <p>
+                            Los alimentos son triturados y transformados
+                            en sustancias más pequeñas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            3. Absorción
+                        </h3>
+
+                        <p>
+                            Los nutrientes pasan principalmente desde
+                            el intestino delgado hacia la sangre.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            4. Eliminación
+                        </h3>
+
+                        <p>
+                            Los materiales que el cuerpo no necesita
+                            son eliminados como desechos.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PARTES PRINCIPALES
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-brain"></i>
+                    Partes y funciones principales
+                </h2>
+
+                <div class="parts-grid">
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-mouth"></i>
+                            Boca
+                        </h3>
+
+                        <p>
+                            Recibe los alimentos. Los dientes los
+                            trituran y la saliva comienza el proceso
+                            digestivo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Esófago
+                        </h3>
+
+                        <p>
+                            Es un tubo muscular que transporta los
+                            alimentos desde la boca hasta el estómago.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-bowl-food"></i>
+                            Estómago
+                        </h3>
+
+                        <p>
+                            Mezcla los alimentos con los jugos
+                            digestivos y continúa descomponiéndolos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-dna"></i>
+                            Intestino delgado
+                        </h3>
+
+                        <p>
+                            En él se completa gran parte de la digestión
+                            y se absorben la mayoría de los nutrientes.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-droplet"></i>
+                            Intestino grueso
+                        </h3>
+
+                        <p>
+                            Absorbe agua y ayuda a formar los desechos
+                            que serán eliminados.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-door-open"></i>
+                            Recto y ano
+                        </h3>
+
+                        <p>
+                            Participan en el almacenamiento y la
+                            eliminación de los desechos del organismo.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ÓRGANOS QUE AYUDAN A LA DIGESTIÓN
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-microscope"></i>
+                    Órganos que ayudan a la digestión
+                </h2>
+
+                <div class="parts-grid">
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-flask"></i>
+                            Hígado
+                        </h3>
+
+                        <p>
+                            Produce bilis, una sustancia que ayuda
+                            en la digestión de las grasas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-circle"></i>
+                            Vesícula biliar
+                        </h3>
+
+                        <p>
+                            Almacena y libera la bilis producida
+                            por el hígado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-vial"></i>
+                            Páncreas
+                        </h3>
+
+                        <p>
+                            Produce sustancias que ayudan a descomponer
+                            diferentes componentes de los alimentos.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 IMPORTANCIA
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    ¿Por qué es importante?
+                </h2>
+
+                <p>
+                    El sistema digestivo permite que nuestro cuerpo
+                    aproveche los alimentos que consumimos.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Los nutrientes obtenidos ayudan al organismo a
+                    obtener energía, crecer, reparar tejidos y
+                    mantenerse funcionando correctamente.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CURIOSIDAD
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    ¿Sabías que...?
+                </h2>
+
+                <p>
+                    La digestión no depende solamente del estómago.
+                    Es un proceso que comienza en la boca y continúa
+                    mientras los alimentos recorren diferentes órganos
+                    del sistema digestivo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 VIDEO
+                 ================================================= -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-video"></i>
+                    Video educativo
+                </h2>
+
+                <video
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="Imagenes/El Aparato Digestivo y la Digestión _ Videos para Niños de Primaria _ Happy Learning.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+
+                <p class="derechos-video">
+
+                    © Video educativo:
+                    <strong>Happy Learning</strong>.<br>
+
+                    Contenido perteneciente a Happy Learning.
+                    Todos los derechos reservados.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MODELO 3D
+                 ================================================= -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-cube"></i>
+                    Explora el sistema en 3D
+                </h2>
+
+                <div class="modelo-3d">
+
+                    <iframe
+                        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/aparato-digestivo"
+                        title="Modelo 3D del aparato digestivo"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CÓMO CUIDARLO
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-heart"></i>
+                    Cómo cuidar tu sistema digestivo
+                </h2>
+
+                <ul class="care-list">
+
+
+                    <li>
+                        Come frutas y verduras.
+                    </li>
+
+
+                    <li>
+                        Bebe suficiente agua.
+                    </li>
+
+
+                    <li>
+                        Mastica bien los alimentos.
+                    </li>
+
+
+                    <li>
+                        Mantén una alimentación variada.
+                    </li>
+
+
+                    <li>
+                        Lávate las manos antes de comer.
+                    </li>
+
+
+                    <li>
+                        Realiza actividad física regularmente.
+                    </li>
+
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 JUEGO
+                 ================================================= -->
+
+            <section class="card full-width game-card">
+
+                <h2>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Juego del Sistema Digestivo
+                </h2>
+
+                <div class="game-placeholder">
+
+                    <iframe
+                        src="https://es.educaplay.com/recursos-educativos/30567526-sistema_digestivo.html"
+                        title="Juego del Sistema Digestivo"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
         </div>
-      </div>
-    </section>
 
-    <section class="card full-width">
-      <h2>Cómo cuidarlo</h2>
-      <ul class="care-list">
-        <li>Come frutas y verduras.</li>
-        <li>Bebe suficiente agua.</li>
-        <li>Mastica bien los alimentos.</li>
-        <li>Lávate las manos antes de comer.</li>
-      </ul>
-    </section>
-  </div>
 
-  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
-</main>
 
-<script>
-  function openSystem() {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    document.getElementById("main-interface").classList.add("active");
-  }
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
 
-  function closeSystem() {
-    document.getElementById("main-interface").classList.remove("active");
-    document.getElementById("welcome-screen").classList.remove("hidden");
-    window.scrollTo(0, 0);
-  }
-</script>
+        <footer>
+
+            <button
+                class="btn-back"
+                type="button"
+                onclick="closeSystem()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Cerrar sección
+
+            </button>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        function openSystem() {
+
+            document
+                .getElementById("welcome-screen")
+                .classList.add("hidden");
+
+            document
+                .getElementById("main-interface")
+                .classList.add("active");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function closeSystem() {
+
+            document
+                .getElementById("main-interface")
+                .classList.remove("active");
+
+            document
+                .getElementById("welcome-screen")
+                .classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
 
 </body>
 </html>

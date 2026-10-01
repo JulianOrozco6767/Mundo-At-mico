@@ -1,100 +1,661 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Muscular | Mundo Atómico</title>
-  <link rel="stylesheet" href="muscular.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Muscular | Mundo Atómico</title>
+
+    <link rel="stylesheet" href="muscular.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
+
 <body>
 
-<section id="welcome-screen">
-  <p class="eyebrow">Mundo Atómico</p>
-  <h1>💪 Sistema Muscular</h1>
-  <p>Descubre los músculos que te ayudan a moverte, correr, saltar y sonreír.</p>
-  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
-  <a class="home-link" href="index.html">← Volver al inicio</a>
-</section>
 
-<main id="main-interface">
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
-    </a>
-    <a class="btn-home" href="index.html">Inicio</a>
-  </header>
+    <!-- =====================================================
+         PANTALLA INICIAL
+         ===================================================== -->
 
-  <div class="content-body">
-    <section class="title-block full-width">
-      <p class="eyebrow">Sistema del cuerpo humano</p>
-      <h1>💪 Sistema Muscular</h1>
-      <p>Los músculos hacen posible cada uno de tus movimientos.</p>
+    <section id="welcome-screen">
+
+        <p class="eyebrow">
+            Mundo Atómico
+        </p>
+
+        <h1>
+            <i class="fa-solid fa-dumbbell"></i>
+            Sistema Muscular
+        </h1>
+
+        <p>
+            Descubre cómo tus músculos trabajan para permitirte
+            moverte, mantener tu postura y realizar diferentes actividades.
+        </p>
+
+        <button
+            class="btn-launch"
+            type="button"
+            onclick="openSystem()">
+
+            Explorar el sistema
+
+        </button>
+
+        <a
+            class="home-link"
+            href="index.html">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+
+        </a>
+
     </section>
 
-    <section class="card">
-      <h2>¿Qué es?</h2>
-      <p>Es el conjunto de músculos del cuerpo. Ellos se contraen y se relajan para producir movimiento.</p>
-    </section>
 
-    <section class="card">
-      <h2>¿Cómo funciona?</h2>
-      <p>Los músculos reciben órdenes del sistema nervioso y tiran de los huesos para mover las articulaciones.</p>
-    </section>
 
-    <section class="card full-width">
-      <h2>Partes y funciones principales</h2>
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
 
-      <div class="parts-grid">
-        <article class="part-item"><h3>Bíceps</h3><p>Ayuda a doblar el brazo.</p></article>
-        <article class="part-item"><h3>Abdominales</h3><p>Dan estabilidad al tronco.</p></article>
-        <article class="part-item"><h3>Cuádriceps</h3><p>Permiten extender la pierna.</p></article>
-        <article class="part-item"><h3>Corazón</h3><p>Es un músculo que bombea sangre.</p></article>
-      </div>
-    </section>
+    <main id="main-interface">
 
-    <section class="card full-width">
-      <h2>Video educativo</h2>
-      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema muscular.</div>
-    </section>
 
-    <section class="card full-width game-card">
-      <h2>Zona de juego</h2>
-      <div class="game-placeholder">
-        <span>🎮</span>
-        <div>
-          <h3>Próximamente: mueve el cuerpo</h3>
-          <p>Aquí puedes agregar un juego para identificar músculos y sus movimientos.</p>
+        <!-- =================================================
+             ENCABEZADO
+             ================================================= -->
+
+        <header class="site-header">
+
+            <a
+                class="brand"
+                href="index.html">
+
+                <img
+                    src="Imagenes/Mundo Atomico Logo.jpeg"
+                    alt="Logo de Mundo Atómico">
+
+                <span>
+
+                    <strong>
+                        Mundo Atómico
+                    </strong>
+
+                    <small>
+                        Aprende y descubre
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                class="btn-home"
+                href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+                Inicio
+
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CUERPO
+             ================================================= -->
+
+        <div class="content-body">
+
+
+            <!-- =================================================
+                 TÍTULO
+                 ================================================= -->
+
+            <section class="title-block full-width">
+
+                <p class="eyebrow">
+                    Sistema del cuerpo humano
+                </p>
+
+                <h1>
+                    <i class="fa-solid fa-dumbbell"></i>
+                    Sistema Muscular
+                </h1>
+
+                <p>
+                    Los músculos trabajan junto con los huesos y
+                    el sistema nervioso para permitir gran parte
+                    de los movimientos de nuestro cuerpo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ¿QUÉ ES?
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    ¿Qué es?
+                </h2>
+
+                <p>
+                    El sistema muscular está formado por los músculos
+                    del cuerpo. Estos tejidos tienen la capacidad de
+                    contraerse y relajarse, produciendo movimiento.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Los músculos también ayudan a mantener nuestra
+                    postura y participan en funciones importantes
+                    que ocurren dentro del organismo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ¿CÓMO FUNCIONA?
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    ¿Cómo funciona?
+                </h2>
+
+                <p>
+                    Muchos movimientos comienzan cuando el sistema
+                    nervioso envía una señal a los músculos.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Al contraerse, los músculos pueden ejercer fuerza
+                    sobre los huesos y producir movimiento en las
+                    articulaciones.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TIPOS DE MÚSCULOS
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-microscope"></i>
+                    Tipos de músculos
+                </h2>
+
+                <div class="parts-grid">
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            Músculo esquelético
+                        </h3>
+
+                        <p>
+                            Está unido a los huesos y permite realizar
+                            movimientos como caminar, correr o levantar
+                            objetos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-heart"></i>
+                            Músculo cardíaco
+                        </h3>
+
+                        <p>
+                            Forma el corazón y se encarga de sus
+                            contracciones para impulsar la sangre.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                            Músculo liso
+                        </h3>
+
+                        <p>
+                            Se encuentra en órganos internos y participa
+                            en movimientos que normalmente no controlamos
+                            de manera consciente.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PARTES PRINCIPALES
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-dumbbell"></i>
+                    Músculos y funciones principales
+                </h2>
+
+                <div class="parts-grid">
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            Bíceps
+                        </h3>
+
+                        <p>
+                            Participa principalmente en la flexión
+                            del brazo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            Tríceps
+                        </h3>
+
+                        <p>
+                            Participa principalmente en la extensión
+                            del brazo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person-walking"></i>
+                            Cuádriceps
+                        </h3>
+
+                        <p>
+                            Se encuentra en la parte frontal del muslo
+                            y ayuda a extender la pierna.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person-walking"></i>
+                            Isquiotibiales
+                        </h3>
+
+                        <p>
+                            Se encuentran en la parte posterior del
+                            muslo y participan en el movimiento de la pierna.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-person"></i>
+                            Abdominales
+                        </h3>
+
+                        <p>
+                            Ayudan a estabilizar el tronco y participan
+                            en diferentes movimientos del cuerpo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            Corazón
+                        </h3>
+
+                        <p>
+                            Es un órgano formado principalmente por
+                            músculo cardíaco y bombea sangre por el cuerpo.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MOVIMIENTO
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-person-running"></i>
+                    Movimiento
+                </h2>
+
+                <p>
+                    Los músculos trabajan en conjunto con los huesos
+                    y las articulaciones. Cuando algunos músculos se
+                    contraen, pueden producir movimientos de diferentes
+                    partes del cuerpo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 IMPORTANCIA
+                 ================================================= -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-earth-americas"></i>
+                    ¿Por qué es importante?
+                </h2>
+
+                <p>
+                    El sistema muscular nos permite realizar actividades
+                    cotidianas como caminar, escribir, correr, hablar
+                    y mantenernos de pie.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Además, algunos músculos participan en funciones
+                    automáticas importantes del organismo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CURIOSIDAD
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    ¿Sabías que...?
+                </h2>
+
+                <p>
+                    No todos los músculos se utilizan de la misma forma.
+                    Algunos pueden controlarse de manera consciente,
+                    mientras que otros trabajan automáticamente para
+                    realizar funciones del organismo.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 VIDEO
+                 ================================================= -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-video"></i>
+                    Video educativo
+                </h2>
+
+                <video
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="Imagenes/EL APARATO MUSCULAR _ Vídeos Educativos para Niños.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+
+                <p class="derechos-video">
+
+                    © Video educativo:
+                    <strong>Happy Learning</strong>.<br>
+
+                    Contenido perteneciente a Happy Learning.
+                    Todos los derechos reservados.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MODELO 3D
+                 ================================================= -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-dumbbell"></i>
+                    Explora el sistema en 3D
+                </h2>
+
+                <div class="modelo-3d">
+
+                    <iframe
+                        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/sistema-muscular"
+                        title="Modelo 3D del sistema muscular"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CUIDADOS
+                 ================================================= -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-heart"></i>
+                    Cómo cuidar tu sistema muscular
+                </h2>
+
+                <ul class="care-list">
+
+
+                    <li>
+                        Calienta antes de realizar actividad física.
+                    </li>
+
+
+                    <li>
+                        Realiza actividad física de forma adecuada.
+                    </li>
+
+
+                    <li>
+                        Consume alimentos variados y nutritivos.
+                    </li>
+
+
+                    <li>
+                        Bebe suficiente agua.
+                    </li>
+
+
+                    <li>
+                        Descansa cuando tu cuerpo lo necesite.
+                    </li>
+
+
+                    <li>
+                        Mantén una buena postura durante tus actividades.
+                    </li>
+
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 JUEGO
+                 ================================================= -->
+
+            <section class="card full-width game-card">
+
+                <h2>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Juego del Sistema Muscular
+                </h2>
+
+                <div class="game-placeholder">
+
+                    <iframe
+                        src="https://es.educaplay.com/recursos-educativos/30565474-sistem_muscular.html"
+                        title="Juego del Sistema Muscular"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
         </div>
-      </div>
-    </section>
 
-    <section class="card full-width">
-      <h2>Cómo cuidarlo</h2>
-      <ul class="care-list">
-        <li>Calienta antes de hacer ejercicio.</li>
-        <li>Estira con cuidado después de moverte.</li>
-        <li>Come alimentos nutritivos.</li>
-        <li>Descansa cuando tu cuerpo lo necesite.</li>
-      </ul>
-    </section>
-  </div>
 
-  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
-</main>
 
-<script>
-  function openSystem() {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    document.getElementById("main-interface").classList.add("active");
-  }
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
 
-  function closeSystem() {
-    document.getElementById("main-interface").classList.remove("active");
-    document.getElementById("welcome-screen").classList.remove("hidden");
-    window.scrollTo(0, 0);
-  }
-</script>
+        <footer>
+
+            <button
+                class="btn-back"
+                type="button"
+                onclick="closeSystem()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Cerrar sección
+
+            </button>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        function openSystem() {
+
+            document
+                .getElementById("welcome-screen")
+                .classList.add("hidden");
+
+            document
+                .getElementById("main-interface")
+                .classList.add("active");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function closeSystem() {
+
+            document
+                .getElementById("main-interface")
+                .classList.remove("active");
+
+            document
+                .getElementById("welcome-screen")
+                .classList.remove("hidden");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
 
 </body>
+
 </html>

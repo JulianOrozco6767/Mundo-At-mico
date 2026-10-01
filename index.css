@@ -35,7 +35,7 @@ header{
 
     height: 105px;
 
-    background: #F0F0F0;
+    background: #DEE6E7;
 
     display: flex;
 
@@ -1379,4 +1379,116 @@ header{
     transform: translateY(1px);
 
     box-shadow: 0 2px 0 #B88600;
+}
+
+/* =========================================
+        FINAL DE LA LÍNEA DE TIEMPO
+========================================= */
+
+.footer {
+    position: relative;
+
+    width: 65%;
+    max-width: 650px;
+
+    margin: 10px auto 0;
+    padding: 18px 25px;
+
+    background: #182235;
+
+    border: 2px solid #00C8FF;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3),
+        0 0 18px rgba(0,200,255,.12);
+
+    transition: .3s;
+
+    z-index: 2;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.footer:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #FFD54F;
+
+    box-shadow:
+        0 10px 30px rgba(0,200,255,.2);
+
+}
+
+
+/* Título */
+
+.footer h2 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    color: #00C8FF;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* Textos */
+
+.footer p {
+
+    color: #C9D8E8;
+
+    font-size: 13px;
+
+    margin: 3px 0;
+
+}
+
+
+/* Teléfono */
+
+.footer .telefono {
+
+    color: #FFD54F;
+
+    font-weight: 700;
+
+}
+
+
+/* Copyright */
+
+.footer .copyright {
+
+    color: #71859A;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================
+                 RESPONSIVE
+========================================= */
+
+@media(max-width: 800px){
+
+    .footer {
+
+        width: calc(100% - 20px);
+
+        padding: 16px 18px;
+
+    }
+
 }

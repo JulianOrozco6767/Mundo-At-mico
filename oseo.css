@@ -1,1 +1,967 @@
-@import url("circulatorio.css");
+/* =========================================================
+   MUNDO ATÓMICO
+   SISTEMA ÓSEO
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --bg: #080c14;
+    --surface: rgba(19, 31, 50, 0.9);
+
+    --cyan: #00c8ff;
+    --blue: #1e73be;
+    --yellow: #ffd54f;
+
+    --text: #f8fafc;
+    --muted: #c9d8e8;
+
+    --border: rgba(255, 255, 255, 0.13);
+
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(0, 200, 255, 0.10),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    font-family: "Nunito", sans-serif;
+
+}
+
+
+/* =========================================================
+   PANTALLA INICIAL
+   ========================================================= */
+
+#welcome-screen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+
+}
+
+
+#welcome-screen.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    position: absolute;
+
+}
+
+
+#welcome-screen .eyebrow {
+
+    margin-bottom: 10px;
+
+}
+
+
+#welcome-screen h1 {
+
+    margin: 0;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 20px rgba(0, 200, 255, 0.25);
+
+}
+
+
+#welcome-screen > p:not(.eyebrow) {
+
+    max-width: 650px;
+
+    margin: 20px auto 30px;
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+
+    margin: 0;
+
+    color: var(--yellow);
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.btn-launch {
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 15px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--blue)
+        );
+
+    color: white;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0, 200, 255, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.btn-launch:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 200, 255, 0.30);
+
+}
+
+
+.home-link {
+
+    margin-top: 20px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.home-link:hover {
+
+    color: var(--cyan);
+
+}
+
+
+/* =========================================================
+   INTERFAZ PRINCIPAL
+   ========================================================= */
+
+#main-interface {
+
+    display: none;
+
+}
+
+
+#main-interface.active {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 6%;
+
+    background:
+        rgba(8, 12, 20, 0.88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+}
+
+
+.brand img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+}
+
+
+.brand span {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand strong {
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: 1.15rem;
+
+}
+
+
+.brand small {
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+
+}
+
+
+.btn-home {
+
+    padding: 9px 18px;
+
+    border: 1px solid rgba(0, 200, 255, 0.35);
+
+    border-radius: 10px;
+
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.btn-home:hover {
+
+    background: var(--cyan);
+
+    color: #061018;
+
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.content-body {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    padding: 55px 0 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.title-block {
+
+    text-align: center;
+
+    padding: 25px 10px 15px;
+
+}
+
+
+.title-block h1 {
+
+    margin: 8px 0 12px;
+
+    font-family: "Fredoka", sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    color: var(--cyan);
+
+}
+
+
+.title-block > p:last-child {
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   FULL WIDTH
+   ========================================================= */
+
+.full-width {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.card {
+
+    padding: 28px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+
+}
+
+
+.card h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    font-family: "Fredoka", sans-serif;
+
+    color: var(--cyan);
+
+    font-size: 1.55rem;
+
+}
+
+
+.card p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.75;
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+   PARTES
+   ========================================================= */
+
+.parts-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+
+.part-item {
+
+    padding: 20px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.part-item:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(0, 200, 255, 0.35);
+
+    background:
+        rgba(0, 200, 255, 0.055);
+
+}
+
+
+.part-item h3 {
+
+    margin: 0 0 10px;
+
+    font-family: "Fredoka", sans-serif;
+
+    color: var(--yellow);
+
+    font-size: 1.15rem;
+
+}
+
+
+.part-item p {
+
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.media-card {
+
+    overflow: hidden;
+
+}
+
+
+.media-card video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 620px;
+
+    margin-top: 10px;
+
+    border-radius: 14px;
+
+    background: #000;
+
+}
+
+
+/* =========================================================
+   DERECHOS DEL VIDEO
+   ========================================================= */
+
+.derechos-video {
+
+    margin-top: 12px !important;
+
+    padding: 12px 15px;
+
+    border-left:
+        3px solid var(--cyan);
+
+    border-radius: 6px;
+
+    background:
+        rgba(0, 200, 255, 0.04);
+
+    color: #aebed0 !important;
+
+    font-size: 0.82rem !important;
+
+    line-height: 1.5 !important;
+
+}
+
+
+.derechos-video strong {
+
+    color: var(--cyan);
+
+}
+
+
+/* =========================================================
+   MODELO 3D
+   ========================================================= */
+
+.modelo-3d {
+
+    width: 100%;
+
+    height: 550px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border:
+        1px solid var(--border);
+
+    background: #000;
+
+}
+
+
+.modelo-3d iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   CUIDADOS
+   ========================================================= */
+
+.care-list {
+
+    margin: 0;
+
+    padding-left: 25px;
+
+    color: var(--muted);
+
+}
+
+
+.care-list li {
+
+    margin-bottom: 13px;
+
+    padding-left: 5px;
+
+    line-height: 1.6;
+
+}
+
+
+.care-list li::marker {
+
+    color: var(--cyan);
+
+}
+
+
+/* =========================================================
+   JUEGO
+   ========================================================= */
+
+.game-card {
+
+    text-align: center;
+
+}
+
+
+.game-card > p {
+
+    margin-bottom: 20px;
+
+}
+
+
+.game-placeholder {
+
+    width: 100%;
+
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border:
+        1px solid var(--border);
+
+    background: #000;
+
+}
+
+
+.game-placeholder iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    padding: 0 0 50px;
+
+    text-align: center;
+
+}
+
+
+.btn-back {
+
+    padding: 12px 24px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: var(--muted);
+
+    font-family: "Nunito", sans-serif;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.btn-back:hover {
+
+    background:
+        rgba(0, 200, 255, 0.10);
+
+    color: var(--cyan);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .content-body {
+
+        grid-template-columns: 1fr;
+
+        width: 92%;
+
+        padding-top: 35px;
+
+    }
+
+
+    .full-width {
+
+        grid-column: auto;
+
+    }
+
+
+    .parts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .site-header {
+
+        padding: 12px 4%;
+
+    }
+
+
+    .brand img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand strong {
+
+        font-size: 1rem;
+
+    }
+
+
+    .brand small {
+
+        font-size: 0.7rem;
+
+    }
+
+
+    .btn-home {
+
+        padding: 8px 14px;
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .card {
+
+        padding: 22px;
+
+    }
+
+
+    .modelo-3d {
+
+        height: 400px;
+
+    }
+
+
+    .game-placeholder {
+
+        height: 450px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    #welcome-screen {
+
+        padding: 20px;
+
+    }
+
+
+    #welcome-screen h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .title-block h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .site-header {
+
+        gap: 10px;
+
+    }
+
+
+    .brand span {
+
+        display: none;
+
+    }
+
+
+    .btn-home {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .card {
+
+        padding: 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 1.35rem;
+
+    }
+
+
+    .modelo-3d {
+
+        height: 330px;
+
+    }
+
+
+    .game-placeholder {
+
+        height: 400px;
+
+    }
+
+}

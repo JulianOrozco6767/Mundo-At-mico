@@ -1,100 +1,636 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema Respiratorio | Mundo Atómico</title>
-  <link rel="stylesheet" href="respiratorio.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Respiratorio | Mundo Atómico</title>
+
+    <link rel="stylesheet" href="respiratorio.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
 
-<section id="welcome-screen">
-  <p class="eyebrow">Mundo Atómico</p>
-  <h1>🫁 Sistema Respiratorio</h1>
-  <p>Descubre cómo entra el oxígeno a tu cuerpo cada vez que respiras.</p>
-  <button class="btn-launch" onclick="openSystem()">Explorar el sistema</button>
-  <a class="home-link" href="index.html">← Volver al inicio</a>
-</section>
+    <!-- PANTALLA INICIAL -->
 
-<main id="main-interface">
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="Imagenes/Mundo Atomico Logo.jpeg" alt="">
-      <span><strong>Mundo Atómico</strong><small>Aprende y descubre</small></span>
-    </a>
-    <a class="btn-home" href="index.html">Inicio</a>
-  </header>
+    <section id="welcome-screen">
 
-  <div class="content-body">
-    <section class="title-block full-width">
-      <p class="eyebrow">Sistema del cuerpo humano</p>
-      <h1>🫁 Sistema Respiratorio</h1>
-      <p>El sistema que te permite respirar y obtener oxígeno.</p>
+        <p class="eyebrow">Mundo Atómico</p>
+
+        <h1>
+            <i class="fa-solid fa-lungs"></i>
+            Sistema Respiratorio
+        </h1>
+
+        <p>
+            Descubre cómo entra el oxígeno a tu cuerpo cada vez que respiras.
+        </p>
+
+        <button
+            class="btn-launch"
+            type="button"
+            onclick="openSystem()">
+
+            Explorar el sistema
+
+        </button>
+
+        <a class="home-link" href="index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+
     </section>
 
-    <section class="card">
-      <h2>¿Qué es?</h2>
-      <p>Es el conjunto de órganos que toma oxígeno del aire y elimina dióxido de carbono del cuerpo.</p>
-    </section>
 
-    <section class="card">
-      <h2>¿Cómo funciona?</h2>
-      <p>El aire entra por la nariz o la boca, viaja por las vías respiratorias y llega a los pulmones.</p>
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
 
-    <section class="card full-width">
-      <h2>Partes y funciones principales</h2>
+    <main id="main-interface" aria-hidden="true">
 
-      <div class="parts-grid">
-        <article class="part-item"><h3>Nariz</h3><p>Filtra y humedece el aire.</p></article>
-        <article class="part-item"><h3>Tráquea</h3><p>Conduce el aire hacia los pulmones.</p></article>
-        <article class="part-item"><h3>Pulmones</h3><p>Intercambian oxígeno y dióxido de carbono.</p></article>
-        <article class="part-item"><h3>Diafragma</h3><p>Ayuda a que el aire entre y salga.</p></article>
-      </div>
-    </section>
+        <!-- ENCABEZADO -->
 
-    <section class="card full-width">
-      <h2>Video educativo</h2>
-      <div class="empty-media">🎬 Aquí podrás agregar un video sobre el sistema respiratorio.</div>
-    </section>
+        <header class="site-header">
 
-    <section class="card full-width game-card">
-      <h2>Zona de juego</h2>
-      <div class="game-placeholder">
-        <span>🎮</span>
-        <div>
-          <h3>Próximamente: ruta del aire</h3>
-          <p>Este espacio puede tener un juego para ordenar el recorrido del aire hasta los pulmones.</p>
+            <a class="brand" href="index.html">
+
+                <img
+                    src="Imagenes/Mundo Atomico Logo.jpeg"
+                    alt="Logo de Mundo Atómico">
+
+                <span>
+                    <strong>Mundo Atómico</strong>
+                    <small>Aprende y descubre</small>
+                </span>
+
+            </a>
+
+            <a class="btn-home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+
+        </header>
+
+
+        <!-- CUERPO -->
+
+        <div class="content-body">
+
+
+            <!-- TÍTULO -->
+
+            <section class="title-block full-width">
+
+                <p class="eyebrow">
+                    Sistema del cuerpo humano
+                </p>
+
+                <h1>
+                    <i class="fa-solid fa-lungs"></i>
+                    Sistema Respiratorio
+                </h1>
+
+                <p>
+                    El sistema que permite respirar y obtener el oxígeno
+                    necesario para el funcionamiento del cuerpo.
+                </p>
+
+            </section>
+
+
+            <!-- ¿QUÉ ES? -->
+
+            <section class="card">
+
+                <h2>¿Qué es?</h2>
+
+                <p>
+                    El sistema respiratorio es el conjunto de órganos y
+                    estructuras que permite tomar oxígeno del aire y eliminar
+                    dióxido de carbono del cuerpo.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    La respiración es necesaria para que las células puedan
+                    obtener el oxígeno que necesitan para realizar sus
+                    funciones.
+                </p>
+
+            </section>
+
+
+            <!-- ¿CÓMO FUNCIONA? -->
+
+            <section class="card">
+
+                <h2>¿Cómo funciona?</h2>
+
+                <p>
+                    El aire entra principalmente por la nariz o la boca,
+                    pasa por las vías respiratorias y llega hasta los
+                    pulmones.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Dentro de los pulmones ocurre el intercambio de gases:
+                    el oxígeno pasa al organismo y el dióxido de carbono
+                    sale del cuerpo al exhalar.
+                </p>
+
+            </section>
+
+
+            <!-- RECORRIDO DEL AIRE -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-wind"></i>
+                    El recorrido del aire
+                </h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-nose"></i>
+                            Nariz y boca
+                        </h3>
+
+                        <p>
+                            Son las principales entradas del aire al cuerpo.
+                            La nariz ayuda a filtrar, calentar y humedecer
+                            el aire.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-head-side-cough"></i>
+                            Faringe y laringe
+                        </h3>
+
+                        <p>
+                            Forman parte de las vías respiratorias y ayudan
+                            a conducir el aire hacia la tráquea.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-wind"></i>
+                            Tráquea y bronquios
+                        </h3>
+
+                        <p>
+                            La tráquea conduce el aire y los bronquios lo
+                            distribuyen hacia los pulmones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-lungs"></i>
+                            Pulmones
+                        </h3>
+
+                        <p>
+                            En ellos se realiza el intercambio de oxígeno
+                            y dióxido de carbono.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PARTES -->
+
+            <section class="card full-width">
+
+                <h2>Partes y funciones principales</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-nose"></i>
+                            Nariz
+                        </h3>
+
+                        <p>
+                            Permite la entrada del aire y ayuda a filtrarlo,
+                            calentarlo y humedecerlo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Faringe</h3>
+
+                        <p>
+                            Es una zona que comunica diferentes estructuras
+                            y participa en el paso del aire hacia las vías
+                            respiratorias.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Laringe</h3>
+
+                        <p>
+                            Se encuentra entre la faringe y la tráquea y
+                            también participa en la producción de la voz.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Tráquea</h3>
+
+                        <p>
+                            Es un conducto que lleva el aire desde la laringe
+                            hacia los bronquios.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>Bronquios</h3>
+
+                        <p>
+                            Son conductos que llevan el aire desde la tráquea
+                            hacia cada uno de los pulmones.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-lungs"></i>
+                            Pulmones
+                        </h3>
+
+                        <p>
+                            Son los principales órganos de la respiración y
+                            contienen estructuras donde ocurre el intercambio
+                            de gases.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-circle-dot"></i>
+                            Alvéolos
+                        </h3>
+
+                        <p>
+                            Son pequeños sacos ubicados en los pulmones donde
+                            se produce el intercambio de oxígeno y dióxido
+                            de carbono.
+                        </p>
+
+                    </article>
+
+
+                    <article class="part-item">
+
+                        <h3>
+                            <i class="fa-solid fa-arrows-up-down"></i>
+                            Diafragma
+                        </h3>
+
+                        <p>
+                            Es un músculo situado debajo de los pulmones que
+                            participa en los movimientos necesarios para
+                            inhalar y exhalar.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- INSPIRACIÓN Y ESPIRACIÓN -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    Inspiración
+                </h2>
+
+                <p>
+                    Durante la inspiración, el aire entra en los pulmones.
+                    El diafragma se contrae y ayuda a que el espacio dentro
+                    del tórax aumente.
+                </p>
+
+            </section>
+
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Espiración
+                </h2>
+
+                <p>
+                    Durante la espiración, el aire sale de los pulmones.
+                    En este proceso se elimina dióxido de carbono producido
+                    por el organismo.
+                </p>
+
+            </section>
+
+
+            <!-- INTERCAMBIO DE GASES -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    Intercambio de gases
+                </h2>
+
+                <p>
+                    El intercambio de gases ocurre en los alvéolos
+                    pulmonares. Allí, el oxígeno del aire pasa hacia la
+                    sangre y el dióxido de carbono pasa desde la sangre
+                    hacia los alvéolos para ser expulsado al respirar.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    De esta manera, el sistema respiratorio trabaja junto
+                    con el sistema circulatorio para llevar oxígeno a
+                    diferentes partes del cuerpo.
+                </p>
+
+            </section>
+
+
+            <!-- IMPORTANCIA -->
+
+            <section class="card">
+
+                <h2>¿Por qué es importante?</h2>
+
+                <p>
+                    El sistema respiratorio permite obtener oxígeno y
+                    eliminar dióxido de carbono, procesos fundamentales
+                    para el funcionamiento del organismo.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Además, participa en acciones como hablar, oler y
+                    mantener el intercambio de gases necesario para las
+                    células.
+                </p>
+
+            </section>
+
+
+            <!-- CURIOSIDAD -->
+
+            <section class="card">
+
+                <h2>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    ¿Sabías que...?
+                </h2>
+
+                <p>
+                    Aunque normalmente no prestamos atención a nuestra
+                    respiración, el cuerpo realiza este proceso
+                    continuamente, incluso mientras dormimos.
+                </p>
+
+            </section>
+
+
+            <!-- VIDEO -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-video"></i>
+                    Video educativo
+                </h2>
+
+                <video
+                    controls
+                    preload="metadata">
+
+                    <source
+                        src="Imagenes/EL APARATO RESPIRATORIO _ Vídeos Educativos para Niños.mp4"
+                        type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+
+                </video>
+
+                <p class="derechos-video">
+                    © Video educativo: <strong>Happy Learning</strong>.<br>
+                    Contenido perteneciente a Happy Learning. Todos los derechos reservados.
+                </p>
+
+            </section>
+
+
+            <!-- MODELO 3D -->
+
+            <section class="card full-width media-card">
+
+                <h2>
+                    <i class="fa-solid fa-lungs"></i>
+                    Explora el sistema en 3D
+                </h2>
+
+                <p>
+                    Explora los pulmones y observa algunas de las estructuras
+                    que participan en la respiración.
+                </p>
+
+                <div class="modelo-3d">
+
+                    <iframe
+                        src="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/dentro-de-los-pulmones"
+                        title="Modelo 3D del sistema respiratorio"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUIDADOS -->
+
+            <section class="card full-width">
+
+                <h2>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Cómo cuidarlo
+                </h2>
+
+                <ul class="care-list">
+
+                    <li>
+                        Evita el humo del tabaco y otros tipos de humo.
+                    </li>
+
+                    <li>
+                        Realiza actividad física regularmente.
+                    </li>
+
+                    <li>
+                        Mantén ventilados los espacios cerrados.
+                    </li>
+
+                    <li>
+                        Cubre tu boca y nariz al toser o estornudar.
+                    </li>
+
+                    <li>
+                        Lávate las manos con frecuencia para ayudar a prevenir
+                        infecciones respiratorias.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- JUEGO -->
+
+            <section class="card full-width game-card">
+
+                <h2>
+                    <i class="fa-solid fa-gamepad"></i>
+                    Juego del Sistema Respiratorio
+                </h2>
+
+                <p>
+                    Pon a prueba lo que aprendiste sobre la respiración
+                    y sus principales órganos.
+                </p>
+
+                <div class="game-placeholder">
+
+                    <iframe
+                        src="https://es.educaplay.com/recursos-educativos/30565178-quiz_del_sistema_respiratorio.html"
+                        title="Juego del Sistema Respiratorio"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
         </div>
-      </div>
-    </section>
 
-    <section class="card full-width">
-      <h2>Cómo cuidarlo</h2>
-      <ul class="care-list">
-        <li>Evita el humo del tabaco.</li>
-        <li>Haz ejercicio regularmente.</li>
-        <li>Ventila los espacios cerrados.</li>
-        <li>Cubre tu boca al toser o estornudar.</li>
-      </ul>
-    </section>
-  </div>
 
-  <footer><button class="btn-back" onclick="closeSystem()">Cerrar sección</button></footer>
-</main>
+        <!-- BOTÓN CERRAR -->
 
-<script>
-  function openSystem() {
-    document.getElementById("welcome-screen").classList.add("hidden");
-    document.getElementById("main-interface").classList.add("active");
-  }
+        <footer>
 
-  function closeSystem() {
-    document.getElementById("main-interface").classList.remove("active");
-    document.getElementById("welcome-screen").classList.remove("hidden");
-    window.scrollTo(0, 0);
-  }
-</script>
+            <button
+                class="btn-back"
+                type="button"
+                onclick="closeSystem()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Cerrar sección
+
+            </button>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openSystem() {
+
+            document
+                .getElementById("welcome-screen")
+                .classList.add("hidden");
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.add("active");
+
+            main.setAttribute("aria-hidden", "false");
+
+        }
+
+
+        function closeSystem() {
+
+            const main =
+                document.getElementById("main-interface");
+
+            main.classList.remove("active");
+
+            main.setAttribute("aria-hidden", "true");
+
+            document
+                .getElementById("welcome-screen")
+                .classList.remove("hidden");
+
+            window.scrollTo(0, 0);
+
+        }
+
+    </script>
 
 </body>
+
 </html>
